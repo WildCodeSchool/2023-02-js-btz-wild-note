@@ -1,0 +1,27 @@
+.favorites-container{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.favorites{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.favorites>button {
+    width: 40%;
+    height: 100%;
+    background: var(--bg-color);
+    box-shadow: var(--main-card-effect);
+    border-radius: 25px;
+    border-style: none;
+    font-family: var(--main-font);
+    color: var(--dark-font);
+    font-weight: 600;
+    font-size: 1em;
+}

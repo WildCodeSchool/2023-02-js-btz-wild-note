@@ -2,7 +2,9 @@ import React from 'react'
 
 const PlayerShuffle = () => {
     return (
-        <div>PlayerShuffle</div>
+        <div className='PlayerShuffle'>
+            <button></button>
+        </div>
     )
 }
 

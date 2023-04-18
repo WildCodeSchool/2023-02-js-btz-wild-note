@@ -1,0 +1,17 @@
+.SearchBar{
+    width: 45%;
+    display: flex;
+    box-shadow: var(--main-card-effect);
+    border-radius: 15px;
+    margin: auto;
+    padding-left:  .5em; 
+    
+    
+}
+
+.SearchText{
+    border-style:none ;
+    padding-left: 0.5em;
+}
+
+

@@ -1,0 +1,26 @@
+.login-form-container {
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input {
+    width: 80%;
+    margin: 1em;
+    padding: 0.8em;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+input[type="text"], input[type="password"] {
+    box-shadow: var(--general-innerShadow);
+}
+
+input[type="submit"] {
+    background: linear-gradient(90deg, #6173E6 0%, #CBD1F8 100%);
+    box-shadow: var(--main-card-effect);
+    cursor: pointer;
+}

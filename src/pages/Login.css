@@ -22,6 +22,7 @@ img {
     border-radius: 50px;
     box-shadow: var(--main-card-effect);
 }
+.title-login { display: flex; }
 h2 {font-family: var(--title-font);}
 h2.welcome {color: var(--main-color)}
 h2.back {color: var(--secondary-color); margin-bottom: 1em;}

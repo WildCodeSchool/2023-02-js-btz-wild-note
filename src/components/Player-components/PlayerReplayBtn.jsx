@@ -1,8 +1,10 @@
 import React from 'react'
-
+import { IoIosRepeat } from 'react-icons/io'
 const PlayerReplayBtn = () => {
     return (
-        <div>PlayerReplayBtn</div>
+        <div className='PlayerReplayBtn'>
+            <button><IoIosRepeat /></button>
+        </div>
     )
 }
 

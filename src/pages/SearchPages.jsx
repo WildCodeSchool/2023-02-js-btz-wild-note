@@ -2,6 +2,8 @@ import {React, useState, useEffect} from 'react'
 import CardGender from '../components/Card/CardGender'
 import CardAlbum from '../components/Card/CardAlbum'
 import SearchBar from '../components/SearchBar/SearchBar'
+import NavBar from '../components/navbar/Navbar'
+import Logo from '../assets/logo-avectexte.png';
 import "./SearchPages.css"
 import axios from 'axios'
 
@@ -30,6 +32,7 @@ const SearchPages = () => {
 
   return (
     <div className='Searchpage'>
+        <img src={Logo} className='logo-home' alt='logo'/>
         <SearchBar/>
         <div className='historic-container'>
             <h2>HISTORIQUE</h2>
@@ -47,6 +50,7 @@ const SearchPages = () => {
               genders.map((gender)=>(<CardGender key={gender.id} genre={gender.genre}/>))}
             </div>
         </div>
+        <NavBar/>
 
     </div>
   )

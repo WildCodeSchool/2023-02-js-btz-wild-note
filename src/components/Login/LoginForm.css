@@ -1,25 +1,33 @@
 .login-form-container {
     height: 75%;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 input {
-    width: 80%;
-    margin: 1em;
-    padding: 0.8em;
+    height: 3em;
+    width: 100%;
+    margin: 1em auto;
     border-radius: 20px;
     background-color: transparent;
     outline: none;
     border: none;
 }
-
 input[type="text"], input[type="password"] {
+    padding: 0.8em;
     box-shadow: var(--general-innerShadow);
+    font-family: var(--main-font)
 }
 
 input[type="submit"] {
+    height: 15%;
+    padding: 0.2em;
+    font-family: var(--title-font);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--bg-color);
     background: linear-gradient(90deg, #6173E6 0%, #CBD1F8 100%);
     box-shadow: var(--main-card-effect);
     cursor: pointer;

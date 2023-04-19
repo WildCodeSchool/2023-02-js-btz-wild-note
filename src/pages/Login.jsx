@@ -14,6 +14,9 @@ const Login = () => {
                 </div>
                 <LoginForm />
             </div>
+            <div className='login-sentence'>
+                <p>Forgot password? or <span>Sign up</span></p>
+            </div>
         </div>
         
     )

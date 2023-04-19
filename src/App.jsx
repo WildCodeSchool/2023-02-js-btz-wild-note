@@ -2,14 +2,14 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Library from './pages/Library';
 import Login from './pages/Login';
-import SearchBar from './components/SearchBar/SearchBar';
+import PreferencePage from './pages/PreferencePage';
 
 function App() {
   return (
     <Router>
-      <SearchBar/>
       <Routes>
         <Route path='/login' element={<Login />} />
+        <Route path='/preference' element={<PreferencePage />} />
         <Route path='/library' element={<Library />} />
       </Routes>
     </Router>

@@ -1,4 +1,6 @@
 .login-page {
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,12 +13,12 @@ img {
 }
 
 .login-container {
-    height: 30em;
+    height: 25em;
     width: 20em;
-    padding: 2em;
+    padding: 2.5em 1.2em;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
     flex-flow: column wrap;
     border-radius: 50px;
@@ -26,3 +28,6 @@ img {
 h2 {font-family: var(--title-font);}
 h2.welcome {color: var(--main-color)}
 h2.back {color: var(--secondary-color); margin-bottom: 1em;}
+
+.login-sentence { margin-top: 2em; color: var(--light-font)}
+.login-sentence span { font-weight: bold; cursor: pointer;}

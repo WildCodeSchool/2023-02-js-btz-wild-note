@@ -39,4 +39,7 @@ body{
 
 h2{
     font-family: var(--title-font);
+    color: var(--main-color)
 }
+
+p{ font-family: var(--main-font);}

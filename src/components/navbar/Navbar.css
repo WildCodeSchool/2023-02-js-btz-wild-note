@@ -1,0 +1,15 @@
+.Navbar {
+    width: 400px;
+    height: 100px;
+    color: var(--main-color);
+    background-color:var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: var(--main-card-effect);
+}
+
+/* .HiHome {
+    box-shadow: var(--main-card-effect);
+} */
+

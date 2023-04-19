@@ -26,3 +26,8 @@
     font-weight: 600;
     font-size: 1em;
 }
+
+.favorites-container>h2{
+    color: var(--main-color);
+    padding-left: 5%;
+}

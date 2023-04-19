@@ -10,11 +10,12 @@
     box-shadow: var(--main-card-effect);
 }
 
-.button {
+.Navbar-Home, .Navbar-Search, .Navbar-Grid, .Navbar-Settings {
     color: var(--light-font);
     border-style: none;
     border-radius: 15px;
 }
 
-.button:hover {color:var(--main-color)}
+.Navbar-Home:hover, .Navbar-Search:hover,
+.Navbar-Grid:hover, .Navbar-Settings:hover {color:var(--main-color)}
 

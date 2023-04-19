@@ -11,10 +11,10 @@ const Navbar = () => {
   return (
     <div className='Navbar'>
         {/* <img src={home} alt="home" className='home-icon'/> */}
-        <button className='button Home'><FaHome style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
-        <button className='button Search'><FaSearch style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
-        <button className='button Grid'><TfiLayoutGrid3Alt style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
-        <button className='button Settings'><MdSettings style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
+        <button className='Navbar-Home'><FaHome style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
+        <button className='Navbar-Search'><FaSearch style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
+        <button className='Navbar-Grid'><TfiLayoutGrid3Alt style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
+        <button className='Navbar-Settings'><MdSettings style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
         </div>
   )
 }

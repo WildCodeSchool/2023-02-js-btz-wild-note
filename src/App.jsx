@@ -1,20 +1,20 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 import Library from './pages/Library';
-import Navbar from './components/navbar/Navbar';
 import Login from './pages/Login';
-import SearchBar from './components/SearchBar/SearchBar';
+import SearchPages from './pages/SearchPages';
+
 
 function App() {
   return (
     <Router>
-      <SearchBar/>
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/library' element={<Library />} />
-
+        <Route path='/search' element={<SearchPages/>}/>
       </Routes>
-      <Navbar />
     </Router>
   );
 }

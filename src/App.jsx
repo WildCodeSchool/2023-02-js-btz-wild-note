@@ -14,7 +14,6 @@ function App() {
         <Route path='/preference' element={<PreferencePage />} />
         <Route path='/library' element={<Library />} />
       </Routes>
-      <Navbar />
     </Router>
   );
 }

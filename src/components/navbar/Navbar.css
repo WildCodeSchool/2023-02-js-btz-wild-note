@@ -1,0 +1,11 @@
+.Navbar {
+    width: 100%;
+    height: 10%;
+    color: var(--main-color);
+    background-color:var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: var(--main-card-effect);
+}
+

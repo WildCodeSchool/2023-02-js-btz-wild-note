@@ -2,4 +2,49 @@
     display: flex;
     width: 60%;
     justify-content: space-evenly;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+
+
+.PlayerNextPlayPrevBtn path:nth-child(2),
+.PlayerNextPlayPrevBtn path:nth-child(3) {
+    fill: var(--secondary-color);
+}
+
+.play-btn {
+    width: 4.7em;
+    height: 4.7em;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    box-shadow: var(--main-card-effect);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PlayerNextPlayPrevBtn svg {
+    padding: 1em;
+    border-radius: 50%;
+    box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
+
+}
+
+
+
+
+button {
+    border: none;
+}
+
+.play-btn-prev {
+    width: 3.7em;
+    height: 3.7em;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    box-shadow: var(--main-card-effect);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

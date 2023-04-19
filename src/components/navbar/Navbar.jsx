@@ -4,16 +4,32 @@ import { FaSearch } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
 
-import React from 'react'
+import { Link } from 'react-router-dom';
+import  { useState, useEffect } from "react";
+
 import './Navbar.css';
 
 const Navbar = () => {
   return (
     <div className='Navbar'>
-        <button className='Navbar-Home'><FaHome style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
-        <button className='Navbar-Search'><FaSearch style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
-        <button className='Navbar-Grid'><TfiLayoutGrid3Alt style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
-        <button className='Navbar-Settings'><MdSettings style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/></button>
+        <Link to='/'>
+          <button className='Navbar-Home'>
+            <FaHome style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
+          </button>
+        </Link>
+        <Link to='/search'>
+          <button className='Navbar-Search'>
+            <FaSearch style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
+          </button>
+        </Link>
+        <Link to='/library'>
+          <button className='Navbar-Grid'>
+            <TfiLayoutGrid3Alt style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
+          </button>
+        </Link>
+        <button className='Navbar-Settings'>
+          <MdSettings style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
+        </button>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { GrCaretNext } from 'react-icons/gr'
 import { GrChapterPrevious } from 'react-icons/gr'
 import { GrChapterNext } from 'react-icons/gr'
-
+import './PlayerNextPlayPrevBtn.css'
 
 
 

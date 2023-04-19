@@ -1,9 +1,9 @@
 .SearchBar{
-    width: 45%;
+    width: 50%;
     display: flex;
+    align-items: center;
     box-shadow: var(--main-card-effect);
     border-radius: 15px;
-    margin: auto;
     padding-left:  .5em; 
     
     

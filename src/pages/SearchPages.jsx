@@ -2,6 +2,7 @@ import {React, useState} from 'react'
 import CardGender from '../components/Card/CardGender'
 import SearchBar from '../components/SearchBar/SearchBar'
 import "./SearchPages.css"
+import SearchResults from '../components/SearchResults/SearchResults'
 import axios from 'axios'
 import { useEffect } from 'react'
 

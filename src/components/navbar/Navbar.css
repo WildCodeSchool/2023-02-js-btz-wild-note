@@ -1,9 +1,11 @@
 .Navbar {
 
+
     width: 90%;
     height: 10%;
 
     color: var(--main-color);    
+
     background-color:var(--bg-color);
     display: flex;
     align-items: center;

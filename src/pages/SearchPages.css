@@ -1,0 +1,9 @@
+h2{
+    color: var(--main-color);
+}
+.Searchpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

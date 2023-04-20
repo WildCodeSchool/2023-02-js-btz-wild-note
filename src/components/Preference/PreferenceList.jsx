@@ -8,7 +8,7 @@ const PreferenceList = () => {
     const [genre, setGenre] = useState([])
 
     useEffect(() => {
-        axios.get("https://wild-note.free.beeceptor.com/musics")
+        axios.get("https://api.deezer.com/genre/")
         .then((res) => res.data)
         .then((data) => setGenre(data))
     }, [])

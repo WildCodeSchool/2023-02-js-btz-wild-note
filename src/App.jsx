@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import PreferencePage from './pages/PreferencePage';
 import Navbar from './components/navbar/Navbar';
 import SearchBar from './components/SearchBar/SearchBar';
+import Player from './pages/Player';
 import SearchPages from './pages/SearchPages'
 import PageAlbum from './pages/PageAlbum';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/library' element={<Library />} />
         <Route path='/search' element={<SearchPages/>}/>
         <Route path='/album' element={<PageAlbum/>}/>
+        <Route path='/Player' element={<Player />} />
       </Routes>
     </Router>
   );

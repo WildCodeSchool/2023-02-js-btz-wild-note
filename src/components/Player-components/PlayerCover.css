@@ -1,0 +1,29 @@
+.player-cover-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-cover-container .cover-border {
+    width: 15em;
+    height: 15em;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    box-shadow: var(--main-card-effect);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-border p {
+    width: 14em;
+    height: 14em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    font-family: var(--main-font)
+}

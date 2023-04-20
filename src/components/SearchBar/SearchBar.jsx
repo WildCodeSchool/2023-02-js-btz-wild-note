@@ -4,7 +4,7 @@ import "./SearchBar.css"
 
 
 
-const SearchBar = () => {
+const SearchBar = ({handleClickSearch}) => {
 
   const [search, setSearch] = useState('')
 
@@ -21,6 +21,7 @@ const SearchBar = () => {
         placeholder="Search by title ..."
 
       />
+      <button type='submit' className='btn-submit' onClick={handleClickSearch}>Submit</button>
 
     </div>
   )

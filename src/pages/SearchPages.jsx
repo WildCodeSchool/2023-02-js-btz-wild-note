@@ -1,59 +1,24 @@
-import {React, useState, useEffect} from 'react'
-import CardGender from '../components/Card/CardGender'
-import CardAlbum from '../components/Card/CardAlbum'
+import {React, useState} from 'react'
 import SearchBar from '../components/SearchBar/SearchBar'
-import NavBar from '../components/navbar/Navbar'
-import Logo from '../assets/logo-avectexte.png';
+import DefaultSearchPage from '../components/DefaultSearchPage/DefaultSearchPage';
 import "./SearchPages.css"
-import axios from 'axios'
-
-
+import SearchResults from '../components/SearchResults/SearchResults'
 
 const SearchPages = () => {
-  const[albums,setAlbums]=useState([])
-  const [genders,setGender]=useState([])
+
+  const [searchResults, setSearchResults] = useState(false);
+
+  const handleClickSearch = () => {
+    setSearchResults(!searchResults);
+  }
+
+return(
+  <div>
+    { searchResults ? <SearchResults /> : <DefaultSearchPage handleClickSearch={handleClickSearch}/> }
+ </div>
+)
 
 
-    useEffect(()=>{
-      axios
-      .get('https://wild-note.free.beeceptor.com/musics')
-      .then((res)=>res.data)
-      .then((data)=>setAlbums(data))
-
-    },[])  
-
-    useEffect(()=>{
-      axios
-      .get('https://wild-note.free.beeceptor.com/musics')
-      .then((res)=>res.data)
-      .then((data)=>setGender(data))
-      
-    },[])
-
-  return (
-    <div className='Searchpage'>
-        <img src={Logo} className='logo-home' alt='logo'/>
-        <SearchBar/>
-        <div className='historic-container'>
-            <h2>HISTORIQUE</h2>
-            <div className='historic-card'>
-              
-              {albums&&
-              albums.map((album)=>(<CardAlbum key={album.id} album={album}/>))} 
-
-            </div>
-        </div>
-        <div className='classbygender'>
-            <h2>PAR GENRE</h2>
-            <div className='cardgender'>
-              {genders&&
-              genders.map((gender)=>(<CardGender key={gender.id} genre={gender.genre}/>))}
-            </div>
-        </div>
-        <NavBar/>
-
-    </div>
-  )
 }
 
 export default SearchPages

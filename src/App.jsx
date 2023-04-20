@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Library from './pages/Library';
 import Login from './pages/Login';
-import SearchPages from './pages/SearchPages';
-
+import PreferencePage from './pages/PreferencePage';
+import Navbar from './components/navbar/Navbar';
+import SearchBar from './components/SearchBar/SearchBar';
+import SearchPages from './pages/SearchPages'
 
 function App() {
   return (
@@ -12,11 +14,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/preference' element={<PreferencePage />} />
         <Route path='/library' element={<Library />} />
         <Route path='/search' element={<SearchPages/>}/>
       </Routes>
     </Router>
   );
 }
-
 export default App;

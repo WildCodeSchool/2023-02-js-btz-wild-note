@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import './FavoriteButton.css';
-import {AiTwotoneHeart} from 'react-icons/ai';
+import { BsFillHeartFill } from 'react-icons/bs'
 
 const FavoriteButton = () => {
 
-    const [favorite, setFavorite] = useState(false);
+  const [favorite, setFavorite] = useState(false);
 
-    const addFavorite = () => {
-        setFavorite(!favorite);
-    }
+  const addFavorite = () => {
+    setFavorite(!favorite);
+  }
 
-    // const favorites = localStorage.setItems('favorite', JSON.stringify(favorite));
+  // const favorites = localStorage.setItems('favorite', JSON.stringify(favorite));
 
   return (
-    <button><AiTwotoneHeart color={favorite ? "var(--secondary-color)" : "var(--dark-font)"} onClick={addFavorite}/></button>
+    <BsFillHeartFill style={{ width: '2.5em', height: '2.5em' }} color={favorite ? "var(--secondary-color)" : "var(--dark-font)"} onClick={addFavorite} />
   )
 }
 

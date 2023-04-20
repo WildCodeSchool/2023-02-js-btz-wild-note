@@ -1,24 +1,27 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import SearchBar from '../components/SearchBar/SearchBar'
-import DefaultSearchPage from '../components/DefaultSearchPage/DefaultSearchPage';
 import "./SearchPages.css"
-import SearchResults from '../components/SearchResults/SearchResults'
+import Historic from '../components/Historic/Historic';
+import GenreSorting from '../components/GenreSorting/GenreSorting';
+import axios from 'axios';
 
 const SearchPages = () => {
 
-  const [searchResults, setSearchResults] = useState(false);
+  const [music, setMusic]=useState([])
 
-  const handleClickSearch = () => {
-    setSearchResults(!searchResults);
-  }
+  useEffect(()=>{
+    axios
+    .get('https://run.mocky.io/v3/5bac33a7-3cd6-491e-8310-64175716f913')
+    .then((res)=>setMusic(res.data.musique))
+  },[])
 
 return(
-  <div>
-    { searchResults ? <SearchResults /> : <DefaultSearchPage handleClickSearch={handleClickSearch}/> }
+  <div className='searchpage'>
+    <SearchBar />
+    <Historic />
+    <GenreSorting music={music} />
  </div>
 )
-
-
 }
 
 export default SearchPages

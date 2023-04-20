@@ -1,12 +1,16 @@
 import React from 'react'
 import './CardGenre.css'
+import CardAlbum from '../../components/Card/CardAlbum';
 
-const CardGenre = ({ genres}) => {
+const CardGenre = ({music}) => {
+
+
+
     return (
         <div className='CardGenre'>
             <div className='CardGenre-container'>
                 <span></span>
-                <h3 className='genre'>{genres.genre}</h3>
+                <h3 className='genre'>{music.genre}</h3>
             </div>
 
         </div>

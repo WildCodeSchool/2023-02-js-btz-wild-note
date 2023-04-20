@@ -1,8 +1,14 @@
 import React from 'react'
 
-const CardAlbum = () => {
+const CardAlbum = ({musics}) => {
+
   return (
-    <div>CardAlbum</div>
+    <div className='CardAlbum'>
+        <img src={musics.albumCover} alt={musics.titre}/>
+        <div>{musics.album} </div>
+        <div>{musics.artiste}</div>
+        <div>{musics.annee}</div>
+    </div>
   )
 }
 

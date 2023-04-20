@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from '../SearchBar/SearchBar';
-import CardGenre from '../Card/CardGenre';
+import SearchBar from '../components/SearchBar/SearchBar';
+import CardGenre from '../components/Card/CardGenre';
 import './DefaultSearchPage.css';
 import axios from 'axios';
 

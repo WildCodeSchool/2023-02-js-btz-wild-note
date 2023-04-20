@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import SearchBar from '../components/SearchBar/SearchBar'
-import DefaultSearchPage from '../components/DefaultSearchPage/DefaultSearchPage';
+import DefaultSearchPage from './DefaultSearchPage';
 import "./SearchPages.css"
 import SearchResults from '../components/SearchResults/SearchResults'
 

@@ -1,0 +1,13 @@
+.Player-title {
+    width: 100%;
+    height: 20%;
+    margin-left: 1.8em;
+}
+
+.Player-title-text h1,
+.Player-title-text h2,
+.Player-title-text h3 {
+    font-family: var(--main-font);
+    font-weight: 200;
+    color: var(--dark-font);
+}

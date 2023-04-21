@@ -8,6 +8,7 @@ import Navbar from './components/navbar/Navbar';
 import SearchBar from './components/SearchBar/SearchBar';
 import Player from './pages/Player';
 import SearchPages from './pages/SearchPages'
+import PageAlbum from './pages/PageAlbum';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/preference' element={<PreferencePage />} />
         <Route path='/library' element={<Library />} />
+        <Route path='/search' element={<SearchPages/>}/>
+        <Route path='/album' element={<PageAlbum/>}/>
         <Route path='/Player' element={<Player />} />
-        <Route path='/search' element={<SearchPages />} />
       </Routes>
     </Router>
   );

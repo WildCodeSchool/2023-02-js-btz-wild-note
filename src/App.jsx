@@ -7,6 +7,7 @@ import PreferencePage from './pages/PreferencePage';
 import Navbar from './components/navbar/Navbar';
 import SearchBar from './components/SearchBar/SearchBar';
 import SearchPages from './pages/SearchPages'
+import SearchResults from './pages/SearchResults';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/preference' element={<PreferencePage />} />
         <Route path='/library' element={<Library />} />
         <Route path='/search' element={<SearchPages/>}/>
+        <Route path='/search/:result' element={<SearchResults />} />
       </Routes>
     </Router>
   );

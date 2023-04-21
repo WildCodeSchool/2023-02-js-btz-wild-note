@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import SearchBar from '../components/SearchBar/SearchBar'
 import "./SearchPages.css"
 import Historic from '../components/Historic/Historic';
 import GenreSorting from '../components/GenreSorting/GenreSorting';
-import axios from 'axios';
+
 
 const SearchPages = () => {
 

@@ -5,7 +5,7 @@ import Historic from '../components/Historic/Historic';
 import './DefaultSearchPage.css';
 import axios from 'axios';
 
-const DefaultSearchPage = ({handleClickSearch}) => {
+const DefaultSearchPage = () => {
     const [genres, setGenres]=useState([])
 
     useEffect(()=>{
@@ -16,7 +16,7 @@ const DefaultSearchPage = ({handleClickSearch}) => {
 
   return (
     <div className='default-searchpage'>
-      <SearchBar handleClickSearch={handleClickSearch}/>
+      <SearchBar />
       <Historic />
       <div className='classbygenre'>
           <h2>BY GENRE</h2>

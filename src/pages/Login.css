@@ -7,7 +7,7 @@
     flex-flow: column wrap;
 }
 
-img {
+.login-page img {
     width: 15em;
     margin: 1em 0 2em 0;
 }

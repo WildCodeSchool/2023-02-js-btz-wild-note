@@ -3,6 +3,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import CardGenre from '../Card/CardGenre';
 import './DefaultSearchPage.css';
 import axios from 'axios';
+import Navbar from '../navbar/Navbar';
 
 const DefaultSearchPage = ({handleClickSearch}) => {
     const [genres, setGenres]=useState([])
@@ -29,6 +30,8 @@ const DefaultSearchPage = ({handleClickSearch}) => {
           genres.map((genres)=>(<CardGenre key={genres.id} genres={genres}/>))}
         </div>
     </div>
+    <Navbar/>
+    
 
 </div>
   )

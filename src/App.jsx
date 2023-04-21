@@ -9,6 +9,10 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Player from './pages/Player';
 import SearchPages from './pages/SearchPages'
 import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
+import SearchResults from './pages/SearchResults';
+import PageAlbum from './pages/PageAlbum';
+
+
 
 function App() {
   return (
@@ -21,6 +25,9 @@ function App() {
         <Route path='/player' element={<Player />} />
         <Route path='/playermini' element={<PlayerBtnMini />} />
         <Route path='/search' element={<SearchPages />} />
+        <Route path='/search/:result' element={<SearchResults />} />
+        <Route path='/album' element={<PageAlbum/>}/>
+        <Route path='/Player' element={<Player />} />
       </Routes>
     </Router>
   );

@@ -1,24 +1,21 @@
-import {React, useState} from 'react'
+import React from 'react'
 import SearchBar from '../components/SearchBar/SearchBar'
-import DefaultSearchPage from '../components/DefaultSearchPage/DefaultSearchPage';
 import "./SearchPages.css"
-import SearchResults from '../components/SearchResults/SearchResults'
+import Historic from '../components/Historic/Historic';
+import GenreSorting from '../components/GenreSorting/GenreSorting';
+
 
 const SearchPages = () => {
 
-  const [searchResults, setSearchResults] = useState(false);
-
-  const handleClickSearch = () => {
-    setSearchResults(!searchResults);
-  }
 
 return(
-  <div>
-    { searchResults ? <SearchResults /> : <DefaultSearchPage handleClickSearch={handleClickSearch}/> }
+  <div className='searchpage'>
+    <SearchBar />
+    <Historic />
+    <GenreSorting />
  </div>
 )
-
-
 }
 
 export default SearchPages
+

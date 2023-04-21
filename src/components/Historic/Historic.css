@@ -1,0 +1,14 @@
+.historic-container{
+    width : 100%;
+    height: 25%;
+}
+
+.historic-container>h2{
+    color: var(--main-color);
+    padding-left: 5%;
+}
+
+.historic-card{
+    width: 100%;
+    height: 80%;
+}

@@ -4,8 +4,7 @@ import Home from './pages/Home';
 import Library from './pages/Library';
 import Login from './pages/Login';
 import PreferencePage from './pages/PreferencePage';
-import Navbar from './components/navbar/Navbar';
-import SearchBar from './components/SearchBar/SearchBar';
+
 import SearchPages from './pages/SearchPages'
 import PageAlbum from './pages/PageAlbum';
 

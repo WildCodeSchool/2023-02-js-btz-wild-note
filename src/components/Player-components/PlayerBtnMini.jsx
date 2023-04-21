@@ -3,6 +3,7 @@ import { BsPlayFill } from 'react-icons/bs'
 import { TbPlayerTrackPrevFilled } from 'react-icons/tb'
 import { TbPlayerTrackNextFilled } from 'react-icons/tb'
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
+import PlayerTitle from './PlayerTitle'
 import './PlayerBtnMini.css'
 
 
@@ -10,6 +11,9 @@ const PlayerBtnMini = () => {
     return (
 
         <div className='btn-position'>
+            <div className='title-mini-container'>
+                <PlayerTitle className='title-mini' />
+            </div>
             <div className='fav-btn-container'>
                 <FavoriteButton className='FavBbtn' />
             </div>

@@ -71,3 +71,24 @@ button {
 .fav-btn-container {
     width: 1.5em;
 }
+
+
+
+.title-mini-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 4em;
+    padding-bottom: 0.2em;
+}
+
+.title-mini-container h1 {
+    font-size: 1em;
+}
+
+.title-mini-container h2 {
+    display: none;
+}
+
+.title-mini-container h3 {
+    font-size: 0.6em;
+}

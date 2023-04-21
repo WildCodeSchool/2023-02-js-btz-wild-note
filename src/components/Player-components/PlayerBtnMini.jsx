@@ -11,7 +11,7 @@ const PlayerBtnMini = () => {
 
         <div className='btn-position'>
             <div className='fav-btn-container'>
-                <FavoriteButton className='FavBbtn' style={{ height: '1em', width: '1em' }} />
+                <FavoriteButton className='FavBbtn' />
             </div>
             <div className='PlayerNextPlayPrevBtnMini'>
 

@@ -1,7 +1,7 @@
 .PlayerNextPlayPrevBtnMini,
 .fav-btn-container {
     display: flex;
-    height: 10%;
+    height: 100%;
     justify-content: flex-end;
     margin-bottom: 1em;
     align-items: center;
@@ -66,4 +66,8 @@ button {
     box-shadow: var(--main-card-effect);
     margin: 0.8em;
 
+}
+
+.fav-btn-container {
+    width: 1.5em;
 }

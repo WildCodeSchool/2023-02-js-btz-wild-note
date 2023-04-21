@@ -13,7 +13,7 @@ const FavoriteButton = () => {
   // const favorites = localStorage.setItems('favorite', JSON.stringify(favorite));
 
   return (
-    <BsFillHeartFill style={{ width: '2.5em', height: '2.5em' }} color={favorite ? "var(--secondary-color)" : "var(--dark-font)"} onClick={addFavorite} />
+    <BsFillHeartFill style={{ width: '100%', height: '100%' }} color={favorite ? "var(--secondary-color)" : "var(--dark-font)"} onClick={addFavorite} />
   )
 }
 

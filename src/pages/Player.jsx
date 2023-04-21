@@ -6,6 +6,7 @@ import './Player.css'
 import PlayerTitle from '../components/Player-components/PlayerTitle'
 import PlayerBtnLike from '../components/Player-components/PlayerBtnLike'
 import ReturnArrow from '../components/Player-components/ReturnArrow'
+import FavoriteButton from '../components/FavoriteButton/FavoriteButton'
 
 const Player = () => {
     return (
@@ -22,7 +23,7 @@ const Player = () => {
                 </div>
 
                 <div className='btn-like'>
-                    <PlayerBtnLike />
+                    <FavoriteButton />
                 </div>
             </div>
             <div className='PlayerBottomBtn'>

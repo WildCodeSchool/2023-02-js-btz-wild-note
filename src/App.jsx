@@ -24,15 +24,11 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/preference' element={<PreferencePage />} />
         <Route path='/library' element={<Library />} />
-
         <Route path='/player' element={<Player />} />
         <Route path='/playermini' element={<PlayerBtnMini />} />
-       
-
-       
         <Route path='/settings' element={<Settings />}/>
         <Route path='/settings/profile' element={<Profile />}/>
-
+        <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:result' element={<SearchResults />} />
         <Route path='/album' element={<PageAlbum/>}/>
         <Route path='/Player' element={<Player />} />

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap');
+
 
 /*  VARIABLES */
 :root {
@@ -11,7 +12,7 @@
     --main-card-effect: -5px 5px 10px rgba(212, 212, 216, 0.2), 5px -5px 10px rgba(212, 212, 216, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(212, 212, 216, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(212, 212, 216, 0.5);
     --btn-player-shadow: inset -5px -5px 20px rgba(255, 255, 255, 0.3), inset 5px 5px 10px var(--main-color); /* bg of btn is --secondary-color */
     --general-innerShadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    --title-font: 'Space Grotesk', sans-serif;
+    --title-font: 'Poppins', sans-serif;
     --main-font: 'Inter', sans-serif;
     
 }
@@ -39,7 +40,7 @@ body{
 
 h2{
     font-family: var(--title-font);
-    color: var(--main-color)
+    color: var(--light-font)
 }
 
 p{ font-family: var(--main-font);}

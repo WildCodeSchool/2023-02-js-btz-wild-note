@@ -1,6 +1,7 @@
-import React from 'react'
-import SearchBar from '../components/SearchBar/SearchBar'
-import "./SearchPages.css"
+import React from 'react';
+import SearchBar from '../components/SearchBar/SearchBar';
+import Navbar from '../components/navbar/Navbar';
+import "./SearchPages.css";
 import Historic from '../components/Historic/Historic';
 import GenreSorting from '../components/GenreSorting/GenreSorting';
 
@@ -13,6 +14,7 @@ return(
     <SearchBar />
     <Historic />
     <GenreSorting />
+    <Navbar />
  </div>
 )
 }

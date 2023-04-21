@@ -12,8 +12,8 @@ import { useState } from 'react';
 
 function Navbar() {
 
-  const location = useLocation();
-  const {pathname} = location;
+ 
+  const {pathname} = useLocation();
   const splitlocation = pathname.split('/');
 
   return (

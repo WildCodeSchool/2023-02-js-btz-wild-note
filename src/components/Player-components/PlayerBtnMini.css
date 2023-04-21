@@ -1,14 +1,14 @@
 .PlayerNextPlayPrevBtnMini,
 .fav-btn-container {
     display: flex;
-    height: 100%;
     justify-content: flex-end;
-    margin-bottom: 1em;
     align-items: center;
 }
 
 .PlayerNextPlayPrevBtnMini {
-    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -60,9 +60,9 @@ button {
 .btn-position {
     border-radius: 1em;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 0.5em;
+    padding: 1em;
     box-shadow: var(--main-card-effect);
     margin: 0.8em;
 
@@ -76,19 +76,27 @@ button {
 
 .title-mini-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 4em;
-    padding-bottom: 0.2em;
 }
 
 .title-mini-container h1 {
     font-size: 1em;
 }
 
-.title-mini-container h2 {
+.title-mini-container h3 {
     display: none;
 }
 
-.title-mini-container h3 {
+.title-mini-container h2 {
     font-size: 0.6em;
+}
+
+
+.image-cover-mini-container {
+    height: 4em;
+    width: 4em;
+    margin-left: .5em;
+    border-radius: 0.5em;
+    background-color: var(--secondary-color);
 }

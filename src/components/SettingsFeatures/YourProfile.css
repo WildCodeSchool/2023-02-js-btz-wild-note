@@ -1,0 +1,38 @@
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.modify-pen, .cancel-btn {
+    width: 100%;
+    padding: 0 0.5em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modify-pen .pen, .cancel-btn .cancel-icon{ 
+    color: var(--dark-font);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.cancel-btn .cancel-icon {height: 2em; width: 2em;}
+.modify-pen .pen:hover {
+    color: var(--main-color);
+    transform: rotate(-15deg);
+}
+.cancel-btn .cancel-icon:hover {color: var(--main-color);}
+
+.profile-photo {
+    margin-bottom: 1em;
+    height: 5.5em;
+    width: 5.5em;
+    border-radius: 50%;
+    box-shadow: var(--main-card-effect);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-infos h2 { margin: 0.5em;}
+.profile-infos h3 { font-family: var(--main-font);}
+.profile-infos p { font-family: var(--main-font); }

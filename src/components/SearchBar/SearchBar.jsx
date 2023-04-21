@@ -6,6 +6,7 @@ import "./SearchBar.css"
 
 const SearchBar = ({handleClickSearch}) => {
 
+
   const [search, setSearch] = useState('')
 
   return (

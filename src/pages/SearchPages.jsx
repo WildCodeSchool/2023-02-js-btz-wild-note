@@ -1,39 +1,24 @@
 import {React, useState} from 'react'
-import CardGender from '../components/Card/CardGender'
 import SearchBar from '../components/SearchBar/SearchBar'
+import DefaultSearchPage from '../components/DefaultSearchPage/DefaultSearchPage';
 import "./SearchPages.css"
-import axios from 'axios'
-import { useEffect } from 'react'
+import SearchResults from '../components/SearchResults/SearchResults'
 
 const SearchPages = () => {
-  const [genders,setGender]=useState([])
 
-    useEffect(()=>{
-      axios
-      .get('https://wild-note.free.beeceptor.com/musics')
-      .then((res)=>res.data)
-      .then((data)=>setGender(data))
-    },[])
+  const [searchResults, setSearchResults] = useState(false);
 
-  return (
-    <div className='Searchpage'>
-        <SearchBar/>
-        <div className='historic-container'>
-            <h2>HISTORIQUE</h2>
-            <div className='historic-card'>
+  const handleClickSearch = () => {
+    setSearchResults(!searchResults);
+  }
 
-            </div>
-        </div>
-        <div className='classbygender'>
-            <h2>PAR GENRE</h2>
-            <div className='cardgender'>
-              {genders&&
-              genders.map((gender)=>(<CardGender key={gender.id} genre={gender.genre}/>))}
-            </div>
-        </div>
+return(
+  <div>
+    { searchResults ? <SearchResults /> : <DefaultSearchPage handleClickSearch={handleClickSearch}/> }
+ </div>
+)
 
-    </div>
-  )
+
 }
 
 export default SearchPages

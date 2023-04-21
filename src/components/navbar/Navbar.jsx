@@ -4,34 +4,58 @@ import { FaSearch } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
 
-import { Link } from 'react-router-dom';
-import  { useState, useEffect } from "react";
-
+import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import { useState } from 'react';
 
-const Navbar = () => {
+
+
+function Navbar() {
+  /* const [isClick, setIsClick] = useState (false)
+  const handleIsClick = () => {
+    setIsClick (!isClick)
+
+  } */
+
+  const location = useLocation();
+  const {pathname} = location;
+  const splitlocation = pathname.split('/');
+
   return (
     <div className='Navbar'>
-        <Link to='/'>
-          <button className='Navbar-Home'>
-            <FaHome style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
-          </button>
-        </Link>
-        <Link to='/search'>
-          <button className='Navbar-Search'>
-            <FaSearch style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
-          </button>
-        </Link>
-        <Link to='/library'>
-          <button className='Navbar-Grid'>
-            <TfiLayoutGrid3Alt style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
-          </button>
-        </Link>
-        <button className='Navbar-Settings'>
-          <MdSettings style={{height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}/>
+      <NavLink to='/'>
+        <button id='Navbar-Home' >
+          <FaHome 
+           className={splitlocation[1] === "" ? "active" : ""}
+          style={{ height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }} />
         </button>
+      </NavLink>
+      <NavLink 
+      to='/search'>
+        <button className='Navbar-Search'>
+          <FaSearch 
+          className={splitlocation[1] === "search" ? "active" : ""}
+          style={{ height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }} />
+        </button>
+      </NavLink>
+      <NavLink 
+      to='/library'>
+        <button className='Navbar-Grid'>
+          <TfiLayoutGrid3Alt
+          className={splitlocation[1] === "library" ? "active" : ""}
+          style={{ height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }} />
+        </button>
+      </NavLink>
+      <NavLink 
+      to='/settings'>
+      <button className='Navbar-Settings'>
+        <MdSettings 
+        className={splitlocation[1] === "settings" ? "active" : ""}
+        style={{ height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))", }} />
+      </button>
+      </NavLink>
     </div>
-  )
+  );
 }
 
 

@@ -11,11 +11,6 @@ import { useState } from 'react';
 
 
 function Navbar() {
-  /* const [isClick, setIsClick] = useState (false)
-  const handleIsClick = () => {
-    setIsClick (!isClick)
-
-  } */
 
   const location = useLocation();
   const {pathname} = location;

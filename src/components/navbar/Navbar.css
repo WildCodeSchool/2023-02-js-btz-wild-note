@@ -22,12 +22,6 @@
 #Navbar-Home:hover, .Navbar-Search:hover,
 .Navbar-Grid:hover, .Navbar-Settings:hover {color:var(--main-color)}
 
-/* .Navbar-Home:focus {
-    color: var(--main-color)
-} */
-
-
-
 
 .isclicked{
     color : var(--main-color)

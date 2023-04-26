@@ -7,7 +7,7 @@ import axios from 'axios';
 const GenreSorting = () => {
 
 
-  const [genres, setGenre] = useState([]);
+  const [genres, setGenres] = useState([]);
 
     useEffect(() => {
         axios.get("https://api.spotify.com/v1/recommendations/available-genre-seeds", {

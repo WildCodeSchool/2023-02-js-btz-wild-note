@@ -5,7 +5,10 @@ import './CardGenre.css'
 const CardGenre = ({genre}) => {
     return (
         <div className='CardGenre'>
-            <h3 className='genre'>{genre}</h3>
+            <div className='CardGenre-container'>
+              <span></span>
+            <h3 className='genre'>{genre}</h3>  
+            </div>
         </div>
     )
 }

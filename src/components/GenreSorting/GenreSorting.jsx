@@ -21,7 +21,9 @@ const GenreSorting = () => {
 
     return (
         <div className="cards-container">
-          <h2>GENRE</h2>
+          <div className='title'>
+            <h2>GENRE</h2>
+          </div>
             {genres &&
                 genres.map((genre) =>
                 <CardGenre key={genre} genre={genre}/> )

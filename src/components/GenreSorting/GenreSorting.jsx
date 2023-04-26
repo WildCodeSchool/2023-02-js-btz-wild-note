@@ -7,31 +7,28 @@ import axios from 'axios';
 const GenreSorting = () => {
 
 
-  const [genres, setGenres]=useState([])
+  const [genres, setGenres]=useState([]);
+  const [onloadGenre, setOnloadGenre] = useState(true)
 
-  useEffect(()=>{
-    axios
-    .get('https://run.mocky.io/v3/5bac33a7-3cd6-491e-8310-64175716f913')
-    .then((res)=>{
-      let genresArray = [];
-      (res.data.musique).forEach(music => {
-        if (!genresArray.includes(music.genre)){
-        genresArray.push(music.genre)
-        }
-      });
-      setGenres(genresArray);
+  useEffect(() => {
+    axios.get("https://api.spotify.com/v1/recommendations/available-genre-seeds", {
+      headers: {
+        Authorization:`Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
+      },
     })
+    .then((res)=> res.data.genres)
+    .then((data) => setGenres(data))
+    setOnloadGenre(false)
   },[])
-  console.log(genres)
+
 
   return (
     <div className='classbygenre'>
-        <h2>BY GENRE</h2>
+        <h2>GENRE</h2>
         <div className='cardgenre'>
-        {genres &&
-        genres.map((genre, index)=>(<CardGenre key={`${genre}-${index}`} genre={genre}/>))}
+        {onloadGenre ? console.log('en chargement') : genres.map((genre)=> <CardGenre key={genre} genre={genre}/>)}
         </div>
-</div>
+    </div>
   )
 }
 

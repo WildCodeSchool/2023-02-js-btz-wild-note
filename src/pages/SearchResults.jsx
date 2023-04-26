@@ -3,7 +3,7 @@ import './SearchResults.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const SearchResults = () => {
+const SearchResults = ({accessToken}) => {
 
   const [result, setResult] = useState([]);
   const params = useParams();

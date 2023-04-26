@@ -1,9 +1,8 @@
 .recommendations{
     width: 100%;
-    height: 35%;
+    height: 25%;
 }
 
 .recommendations>h2{
-    color: var(--main-color);
     padding-left: 5%;
 }

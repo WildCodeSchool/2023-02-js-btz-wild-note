@@ -1,0 +1,28 @@
+.profile-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column;
+}
+
+.profile-page img {
+    width: 15em;
+    margin: 1em 0 2em 0;
+}
+
+.profile-container {
+    padding: 2.5em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column wrap;
+    border-radius: 50px;
+    box-shadow: var(--main-card-effect);
+}
+.profile-container.profile {
+    margin-bottom: 2em;
+    width: 40%;
+}

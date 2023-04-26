@@ -1,12 +1,15 @@
-import { React, useState } from 'react'
-import { IoIosSearch } from "react-icons/io"
-import "./SearchBar.css"
+import { React, useState } from 'react';
+import { IoIosSearch } from "react-icons/io";
+import "./SearchBar.css";
+import { Link } from 'react-router-dom';
 
 
 
-const SearchBar = ({handleClickSearch}) => {
+const SearchBar = () => {
 
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('');
+  console.log(search);
+
 
   return (
     <div className='SearchBar'>
@@ -14,6 +17,7 @@ const SearchBar = ({handleClickSearch}) => {
       <input
         className="SearchText"
         type="text"
+        value={search}
         onChange={(e) => {
           setSearch(e.target.value)
 
@@ -21,7 +25,7 @@ const SearchBar = ({handleClickSearch}) => {
         placeholder="Search by title ..."
 
       />
-      <button type='submit' className='btn-submit' onClick={handleClickSearch}>Submit</button>
+      <Link to={`/search/${search}`}><button type='submit' className='btn-submit'>Submit</button></Link>
 
     </div>
   )

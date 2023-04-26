@@ -36,5 +36,3 @@ const DefaultSearchPage = ({handleClickSearch}) => {
 </div>
   )
 }
-
-export default DefaultSearchPage;

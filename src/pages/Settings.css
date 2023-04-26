@@ -1,0 +1,13 @@
+.settings-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.settings-page img {
+    width: 15em;
+    margin: 1em 0 2em 0;
+}

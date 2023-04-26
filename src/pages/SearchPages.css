@@ -9,10 +9,9 @@
 
 .classbygenre{
     width: 100%;
-    height: 60%;
+    height: 45%;
 }
 .classbygenre h2{
-    color: var(--main-color);
     padding-left: 5%;
 }
 

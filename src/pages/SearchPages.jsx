@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
+import SearchBar from '../components/SearchBar/SearchBar';
 import Navbar from '../components/navbar/Navbar';
-import SearchBar from '../components/SearchBar/SearchBar'
-import "./SearchPages.css"
+import "./SearchPages.css";
 import Historic from '../components/Historic/Historic';
 import GenreSorting from '../components/GenreSorting/GenreSorting';
 

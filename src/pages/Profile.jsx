@@ -1,6 +1,6 @@
 import logoavectexte from '../assets/logo-avectexte.png';
-import ModifyProfile from '../components/SettingsFeatures/ModifyProfile';
-import YourProfile from '../components/SettingsFeatures/YourProfile'
+import YourProfile from '../components/SettingsFeatures/YourProfile';
+import Navbar from '../components/navbar/Navbar';
 import "./Profile.css";
 
 const Profile = () => {
@@ -15,6 +15,7 @@ const Profile = () => {
             {/* <div className='profile-container form'>
                 <ModifyProfile /> 
             </div> */}
+            <Navbar />
         </div>
         
     )

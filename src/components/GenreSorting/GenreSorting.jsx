@@ -18,6 +18,7 @@ const GenreSorting = () => {
     })
     .then((res)=> res.data.genres)
     .then((data) => setGenres(data))
+    .catch(console.log)
     setOnloadGenre(false)
   },[])
 

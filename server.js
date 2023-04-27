@@ -48,7 +48,7 @@ app.listen(8080, () => {
   console.log('Serveur lancé sur le port 8080');
 });
 
-function getToken() {
+/* function getToken() {
   axios.post('http://localhost:8080/token')
     .then(response => {
       console.log(response.data.token); // Affiche le jeton d'accès dans la console
@@ -56,6 +56,15 @@ function getToken() {
     .catch(error => {
       console.log(error.response.status + ' ' + error.response.statusText); // Affiche le code d'erreur HTTP dans la console
     });
+} */
+
+const getToken = async () => {
+  try {
+    const response = await axios.post('http://localhost:8080/token');
+    console.log(response.data.token); // Affiche le jeton d'accès dans la console
+  } catch (error) {
+    console.log(error.response.status + ' ' + error.response.statusText); // Affiche le code d'erreur HTTP dans la console
+  }
 }
 
 getToken();

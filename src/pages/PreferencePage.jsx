@@ -1,5 +1,5 @@
 import logoavectexte from '../assets/logo-avectexte.png';
-import GenreSorting from '../components/GenreSorting/GenreSorting';
+import GenreList from '../components/Preference/GenreList';
 import './PreferencePage.css';
 
 const PreferencePage = () => {
@@ -12,7 +12,7 @@ const PreferencePage = () => {
                 <p className='choose'>Choose your style!</p>
                 
             </div>
-            <GenreSorting />
+            <GenreList />
         </div>
         
     )

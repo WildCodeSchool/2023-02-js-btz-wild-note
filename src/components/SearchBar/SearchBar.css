@@ -1,13 +1,12 @@
 .SearchBar{
-    width: 50%;
+    width: 60%;
+    height: 5%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: var(--main-card-effect);
+    box-shadow: var(--general-innerShadow);
     border-radius: 15px;
-    padding-left:  .5em; 
-    
-    
-    
+    padding: .5em 1em;     
 }
 
 .SearchText{
@@ -15,4 +14,19 @@
     padding-left: 0.5em;
 }
 
+.SearchBar input{
+    height: 100%;
+    width: 80%;
+    background-color: transparent;
+    outline: none;
+}
 
+.btn-send{
+    fill: #bebebe;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.btn-send:hover{
+    fill: var(--main-color);
+}

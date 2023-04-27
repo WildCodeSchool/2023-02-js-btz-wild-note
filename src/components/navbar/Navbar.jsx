@@ -3,11 +3,8 @@ import {FaHome } from 'react-icons/fa';
 import { FaSearch } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
-
 import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import { useState } from 'react';
-
 
 
 function Navbar() {
@@ -22,7 +19,7 @@ function Navbar() {
         <button id='Navbar-Home' >
           <FaHome 
            className={splitlocation[1] === "" ? "active" : ""}
-          style={{ height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }} />
+          style={{ height: "2.2em", width: "2.2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }} />
         </button>
       </NavLink>
       <NavLink 
@@ -38,7 +35,7 @@ function Navbar() {
         <button className='Navbar-Grid'>
           <TfiLayoutGrid3Alt
           className={splitlocation[1] === "library" ? "active" : ""}
-          style={{ height: "2em", width: "2em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }} />
+          style={{ height: "1.5em", width: "1.5em", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }} />
         </button>
       </NavLink>
       <NavLink 

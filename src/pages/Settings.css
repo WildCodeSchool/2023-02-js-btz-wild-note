@@ -2,7 +2,7 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-flow: column wrap;
 }
@@ -11,3 +11,5 @@
     width: 15em;
     margin: 1em 0 2em 0;
 }
+
+.options-container a {text-decoration: none;}

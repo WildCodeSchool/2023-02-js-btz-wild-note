@@ -6,8 +6,7 @@ import Login from './pages/Login';
 import PreferencePage from './pages/PreferencePage';
 import Settings from './pages/Settings';
 import Profile from './pages/Profile';
-import Navbar from './components/navbar/Navbar';
-import SearchBar from './components/SearchBar/SearchBar';
+
 import Player from './pages/Player';
 import SearchPages from './pages/SearchPages'
 import PlayerBtnMini from './components/Player-components/PlayerBtnMini';

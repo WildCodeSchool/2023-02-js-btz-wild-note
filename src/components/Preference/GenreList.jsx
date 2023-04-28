@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './GenreSorting.css';
-import CardGenre from '../Card/CardGenre';
+import GenreCard from './GenreCard';
+import NextPage from './NextPage';
 import axios from 'axios';
 
-
-const GenreSorting = () => {
+const GenreList = () => {
 
 
   const [genres, setGenres] = useState([]);
@@ -21,15 +20,13 @@ const GenreSorting = () => {
 
     return (
         <div className="cards-container">
-          <div className='title'>
-            <h2>GENRE</h2>
-          </div>
+          <NextPage />
             {genres &&
                 genres.map((genre) =>
-                <CardGenre key={genre} genre={genre}/> )
+                <GenreCard key={genre} genre={genre}/> )
             }
         </div>
     )
 }
 
-export default GenreSorting;
+export default GenreList;

@@ -1,5 +1,5 @@
 import logoavectexte from '../assets/logo-avectexte.png';
-import PreferenceList from '../components/Preference/PreferenceList';
+import GenreList from '../components/Preference/GenreList';
 import './PreferencePage.css';
 
 const PreferencePage = () => {
@@ -10,9 +10,9 @@ const PreferencePage = () => {
             </div>
             <div className='preference-form-container'>
                 <p className='choose'>Choose your style!</p>
-                <PreferenceList />
+                
             </div>
-            
+            <GenreList />
         </div>
         
     )

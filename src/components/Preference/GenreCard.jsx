@@ -5,6 +5,8 @@ import './GenreCard.css'
 const GenreCard = ({genre}) => {
 
     const [selected, setSelected] = useState(true)
+    const recommendationGenre = [];
+
     const handleSelect = () => {
         setSelected(!selected)
     }

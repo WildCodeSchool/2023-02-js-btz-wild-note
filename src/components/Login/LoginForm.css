@@ -38,3 +38,5 @@
     font-size: 0.8em;
     color: red; 
 }
+
+.login-form-container .info-container { display: none; }

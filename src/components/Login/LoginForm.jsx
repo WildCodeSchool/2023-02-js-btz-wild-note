@@ -1,34 +1,35 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useContext } from 'react'
 import './LoginForm.css'
-
+import { UserContext } from './UsernameContext'
 
 const LoginForm = () => {
+
 
     const [chosenUsername, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPwd, setConfirmPwd] = useState('')
     const [errorMessage, setErrorMessage] = useState("")
-    const [badEmail, setBadEmail] = useState("")
-    const [validEmail, setValidEmail] = useState(null)
+    const [validEmail, setValidEmail] = useState("")
 
     const handleUsername = (e) => {
         setUsername(e.target.value)
     }
-    const handleEmail = (e) => {
-        let newEmail = e.target.value
-        setEmail(newEmail)
 
-        let emailReg = /\S+@\S+\.\S+/gi;
-        if  (newEmail.length === 0) {
-            setBadEmail("")
-        } else if (!newEmail.match(emailReg)) {
-            setBadEmail("Email address is invalid.")
-        }
+    const isValidEmail = (email) => {
+        return /\S+@\S+\.\S+/.test(email)
     }
 
-    
+    const handleEmail = (e) => {
+        if (!isValidEmail(e.target.value)) {
+            setValidEmail("Email is invalid!");
+        } else {
+            setValidEmail("")
+        }
+        setEmail(e.target.value)
+    }
+
     const handlePassword = (e) => {
         let newPwd = e.target.value
         setPassword(newPwd)
@@ -44,17 +45,14 @@ const LoginForm = () => {
             setErrorMessage("Password should contain uppercase letters!");
          } else if (!newPwd.match(numCase)) {
             setErrorMessage("Password should contains numbers!");
-         } else if (!newPwd.length < 8) {
-            setErrorMessage("Password length should be more than 8 letters!");
          } else {
-            setErrorMessage("Password is strong!"); 
+            setErrorMessage(""); 
          }
     }
 
     const handleConfirmPwd = (e) => {
         setConfirmPwd(e.target.value)   
     }
-    
 
     return(
         <form className="login-form-container">
@@ -62,7 +60,7 @@ const LoginForm = () => {
                 <input type="text" name="username" id="username" placeholder="Username" onChange={handleUsername} value={chosenUsername} required/>
                 <input type="email" name="email" id="email" placeholder="Email address" 
                 onChange={handleEmail} value={email} required />
-                <p className="error-message">{badEmail}</p>
+                <p className="error-message">{validEmail}</p>
                 <input type="password" name="password" id="password" placeholder="Password" minLength="8" onChange={handlePassword} value={password} required/>
                 <p className="error-message">{errorMessage}</p>
                 <input type="password" name="password" id="confirmPwd" placeholder="Confirm password" onChange={handleConfirmPwd} value={confirmPwd} required/>

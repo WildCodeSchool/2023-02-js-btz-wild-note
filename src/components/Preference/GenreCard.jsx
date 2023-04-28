@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import './GenreCard.css'
 
 
-const GenreCard = ({genre}) => {
+const GenreCard = ({genre, selectedGenres, setSelectedGenres}) => {
 
-    const [selected, setSelected] = useState(true)
-    const recommendationGenre = [];
+    const [selected, setSelected] = useState(false)
 
     const handleSelect = () => {
         setSelected(!selected)
+        setSelectedGenres([...selectedGenres, genre])
     }
 
     return (
         <div className='GenreCard'>
-            <div className={selected ? "Card-container" : "Card-container selected"} onClick={handleSelect}>
+            <div className={!selected ? "Card-container" : "Card-container selected"} onClick={handleSelect}>
               <span></span>
             <h3 className='genre'>{genre}</h3>  
             </div>

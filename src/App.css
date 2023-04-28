@@ -17,6 +17,25 @@
     
 }
 
+.disco-mode * {
+    animation: disco 1s linear infinite;
+  }
+  
+  @keyframes disco {
+    0% {
+      background-color: red;
+      color: white;
+    }
+    50% {
+      background-color: green;
+      color: yellow;
+    }
+    100% {
+      background-color: blue;
+      color: pink;
+    }
+  }
+
 /* INITIALIZATION*/
 
 *{

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import logoavectexte from '../../assets/logo-avectexte.png';
 import "./ThemeSwitch.css";
+import ThemeSwitchDisco from './ThemeSwitchDisco';
+// import Switch from "react-switch";
 
 const ThemeSwitch = () => {
     const [isLight, setIsLight] = useState(true)
@@ -11,9 +13,10 @@ const ThemeSwitch = () => {
 
     return(
         <div className={isLight ? "light-theme" : "dark-theme"}>
-            <button className={isLight ? "light-btn" : "dark-btn"} onClick={toggleTheme}>{isLight ? "Light Mode" : "Dark Mode"}</button>
+            <div className={isLight ? "light-btn" : "dark-btn"} onClick={toggleTheme}>{isLight ? "Dark Mode" : "Light Mode"}</div>
+            {/* <ReactSwitch/> */}
+            <div className={isLight ? "light-btn" : "disco-btn"} onClick={toggleTheme}>{isLight ? "Disco Mode" : "Light Mode"}</div>
         </div>
-        
     )
 }
 

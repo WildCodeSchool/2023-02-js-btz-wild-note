@@ -16,7 +16,7 @@ const GenreSorting = () => {
             },
           })
         .then((res) => res.data.genres)
-        .then((data) => setGenre(data))
+        .then((data) => setGenres(data))
     }, [])
 
     return (

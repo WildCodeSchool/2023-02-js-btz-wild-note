@@ -13,7 +13,7 @@ import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
 import SearchResults from './pages/SearchResults';
 import PageAlbum from './pages/PageAlbum';
 
-
+const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
 function App() {
   return (

@@ -1,4 +1,9 @@
-
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
 .CardGenre {
     height: 130px;
     width: 100px;

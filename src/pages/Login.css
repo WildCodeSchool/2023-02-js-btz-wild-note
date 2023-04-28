@@ -13,8 +13,7 @@
 }
 
 .login-container {
-    height: 25em;
-    width: 20em;
+    width: 75%;
     padding: 2.5em 1.2em;
     display: flex;
     align-items: center;

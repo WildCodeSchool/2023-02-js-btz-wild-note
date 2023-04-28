@@ -10,12 +10,12 @@ const Login = () => {
             </div>
             <div className='login-container'>
                 <div className='title-login'>
-                    <h2 className='welcome'>Welcome&nbsp;</h2> <h2 className='back'>back!</h2>
+                    <h2 className='welcome'>Welcome&nbsp;</h2> <h2 className='back'>Wilder!</h2>
                 </div>
                 <LoginForm />
             </div>
             <div className='login-sentence'>
-                <p>Forgot password? or <span>Sign up</span></p>
+                <p>Already signed up? Click here to <span>login</span></p>
             </div>
         </div>
         

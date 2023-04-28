@@ -27,7 +27,7 @@ function App() {
         <Route path='/settings' element={<Settings />}/>
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
-        <Route path='/search/:result' element={<SearchResults />} />
+        <Route path='/search/:research' element={<SearchResults />} />
         <Route path='/album' element={<PageAlbum/>}/>
         <Route path='/Player' element={<Player />} />
       </Routes>

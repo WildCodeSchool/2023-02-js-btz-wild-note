@@ -14,6 +14,7 @@ import SearchPages from './pages/SearchPages'
 import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
 import SearchResults from './pages/SearchResults';
 import PageAlbum from './pages/PageAlbum';
+import SignUpPage from './pages/SignUp';;
 
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
@@ -35,6 +36,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home genres={genres} selectedGenres={selectedGenres} />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/sign-up' element={<SignUpPage />} />
         <Route path='/preference' element={<PreferencePage genres={genres} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} />} />
         <Route path='/library' element={<Library />} />
         <Route path='/player' element={<Player />} />

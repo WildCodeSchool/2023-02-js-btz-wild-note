@@ -1,6 +1,6 @@
 .recommendations{
     width: 100%;
-    height: 25%;
+    height: 30%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -17,17 +17,21 @@
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    gap: 1em;
-    overflow: scroll;
+    gap: 1.5em;
+    overflow-y: auto;
+}
+.recommendation-cards-container::-webkit-scrollbar {
+    display: none;
 }
 
 .recommendations .Card-container {
-    width: 4.5em;
-    height: 6em;
+    width: 6em;
+    height: 7.5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    text-align: center;
     box-shadow: var(--main-card-effect);
     border-radius: 8px;
 }

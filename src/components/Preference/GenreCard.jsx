@@ -10,7 +10,7 @@ const GenreCard = ({genre, selectedGenres, setSelectedGenres}) => {
         setSelected(!selected)
         setSelectedGenres([...selectedGenres, genre])
     }
-
+    
     return (
         <div className='GenreCard'>
             <div className={!selected ? "Card-container" : "Card-container selected"} onClick={handleSelect}>

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import GenreCard from '../Preference/GenreCard';
-import axios from 'axios';
 import './Recommendations.css';
 
 const Recommendations = ({selecteGenres}) => {
-
+  
   return (
     <div className='recommendations'>
       <div className='title'>

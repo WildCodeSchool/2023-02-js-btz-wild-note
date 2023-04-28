@@ -1,15 +1,18 @@
 .Navbar {
-    width: 90%;
+    bottom: 0;
+    width: 80%;
     height: 10%;
     color: var(--main-color);    
     background-color:var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 0 auto;
+    margin: 1em auto;
     padding: 0.9em;
     border-radius: 15px;
     box-shadow: var(--main-card-effect);
+    z-index: 10;
+    position: fixed;
 }
 
 

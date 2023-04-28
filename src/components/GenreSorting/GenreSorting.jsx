@@ -24,7 +24,7 @@ const GenreSorting = () => {
 
 
   return (
-    <div className='classbygenre'>
+    <div className='cards-container'>
         <h2>GENRE</h2>
         <div className='cardgenre'>
         {onloadGenre ? console.log('en chargement') : genres.map((genre)=> <CardGenre key={genre} genre={genre}/>)}

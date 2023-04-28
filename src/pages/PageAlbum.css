@@ -1,0 +1,30 @@
+.PageAlbum{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--main-card-effect);
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+
+  .album-cover{
+    width:55%;
+    
+    object-fit: cover;
+
+    border-radius: 200px;
+    box-shadow:var(--main-card-effect)
+  }
+
+  .track-list{
+  
+    text-align: center;
+    
+  }
+  .track{
+    overflow: scroll;
+  }

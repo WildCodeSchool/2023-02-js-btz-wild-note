@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import logoavectexte from '../assets/logo-avectexte.png';
+import Navbar from '../components/navbar/Navbar';
 import ThemeSwitch from '../components/SettingsFeatures/ThemeSwitch';
 import "./Settings.css";
 
@@ -11,6 +13,10 @@ const Settings = () => {
             <div className='settings-container'>
                 <ThemeSwitch />
             </div>
+            <div className='options-container'>
+                <Link to="/settings/profile"><h2>My profile</h2></Link>
+            </div>
+            <Navbar />
         </div>
         
     )

@@ -17,7 +17,7 @@ const SearchBar = () => {
   const [artists, setArtists] = useState('');
   const [album, setAlbum] = useState([]);
   const [track, setTrack] = useState([]);
-  const [onloadGenre, setOnloadGenre] = useState(true)
+
 
   useEffect(() => {
     axios
@@ -27,7 +27,6 @@ const SearchBar = () => {
       },
     })
     .then((res) => setSearch(res.data.artists.items))
-    setOnloadGenre(false)
   }, []);
 
   return (

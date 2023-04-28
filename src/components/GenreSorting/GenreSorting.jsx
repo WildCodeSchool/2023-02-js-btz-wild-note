@@ -8,7 +8,7 @@ const GenreSorting = () => {
 
 
   const [genres, setGenres]=useState([]);
-  const [onloadGenre, setOnloadGenre] = useState(true)
+
 
   useEffect(() => {
     axios.get("https://api.spotify.com/v1/recommendations/available-genre-seeds", {
@@ -19,7 +19,6 @@ const GenreSorting = () => {
     .then((res)=> res.data.genres)
     .then((data) => setGenres(data))
     .catch(console.log)
-    setOnloadGenre(false)
   },[])
 
 
@@ -27,7 +26,7 @@ const GenreSorting = () => {
     <div className='cards-container'>
         <h2>GENRE</h2>
         <div className='cardgenre'>
-        {onloadGenre ? console.log('en chargement') : genres.map((genre)=> <CardGenre key={genre} genre={genre}/>)}
+        {genres.map((genre)=> <CardGenre key={genre} genre={genre}/>)}
         </div>
     </div>
   )

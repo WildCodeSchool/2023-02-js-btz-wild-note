@@ -36,3 +36,5 @@
 .profile-infos h2 { margin: 0.5em;}
 .profile-infos h3 { font-family: var(--main-font);}
 .profile-infos p { font-family: var(--main-font); }
+
+.profile-infos .login-form, .profile-infos input {display: none;}

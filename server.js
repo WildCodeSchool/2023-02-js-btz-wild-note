@@ -51,6 +51,7 @@ app.listen(8080, () => {
   console.log('Serveur lancé sur le port 8080');
 });
 
+
 async function getToken() {
   let response;
   try { 
@@ -59,12 +60,6 @@ async function getToken() {
   } catch (error) {
     console.log(error.response.status + ' ' + error.response.statusText);
   }
-    // .then(response => {
-    //   console.log(response.data.token); // Affiche le jeton d'accès dans la console
-    // })
-    // .catch(error => {
-    //   console.log(error.response.status + ' ' + error.response.statusText); // Affiche le code d'erreur HTTP dans la console
-    // });
 }
 
 getToken();

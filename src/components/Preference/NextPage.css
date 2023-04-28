@@ -1,0 +1,16 @@
+.next-page {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 90%;
+    right: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.arrow-next {
+    height: 3em;
+    width: 3em;
+    fill: rgba(144, 144, 144, 0.7);
+    cursor: pointer;
+}

@@ -50,6 +50,7 @@ const PageAlbum = () => {
 
       <div className='track-list'>
         {titleLists.map((trackName) => <p key={trackName} className='track'>{trackName}</p>)}
+        
       </div>
       <Navbar />
     </div>

@@ -1,16 +1,32 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { IoIosSearch } from "react-icons/io";
 import "./SearchBar.css";
 import { Link } from 'react-router-dom';
 import { FaPaperPlane } from 'react-icons/fa';
 import mini_logo from '../../assets/logo-sanstexte.png';
-
+import axios from 'axios';
 
 const SearchBar = () => {
 
   const [search, setSearch] = useState('');
   console.log(search);
 
+
+  const [genre, setGenre] = useState([]);
+  const [artists, setArtists] = useState('');
+  const [album, setAlbum] = useState([]);
+  const [track, setTrack] = useState([]);
+
+
+  useEffect(() => {
+    axios
+    .get(`https://api.spotify.com/v1/search?q=${artists}&type=artist`, {
+      headers: {
+        Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`
+      },
+    })
+    .then((res) => setSearch(res.data.artists.items))
+  }, []);
 
   return (
     <div className='search-components'>

@@ -28,7 +28,7 @@ const YourProfile = (props) => {
                 <div className='cancel-btn'>
                     <IoIosClose className='cancel-icon' onClick={toggleForm}/>
                 </div>
-                <div className='form'><ModifyProfile newUsername={newUsername} changeDesc={changeDesc} handleNewUsername={handleNewUsername} handleNewDescription={handleNewDescription} toggleForm={toggleForm}/></div>
+                <ModifyProfile newUsername={newUsername} changeDesc={changeDesc} handleNewUsername={handleNewUsername} handleNewDescription={handleNewDescription} toggleForm={toggleForm}/>
             </div>  : 
             <><div className='modify-pen'>
                 <BsFillPencilFill className='pen' onClick={toggleForm}/>

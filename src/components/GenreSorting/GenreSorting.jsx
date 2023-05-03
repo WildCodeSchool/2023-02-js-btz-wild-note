@@ -23,7 +23,7 @@ const GenreSorting = () => {
 
 
   return (
-    <div className='cards-container'>
+    <div className='genre-container'>
         <h2>GENRE</h2>
         <div className='cardgenre'>
         {genres.map((genre)=> <CardGenre key={genre} genre={genre}/>)}

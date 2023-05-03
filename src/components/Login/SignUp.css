@@ -22,9 +22,12 @@
 }
 
 .login-form-container a button {
+    text-decoration: none;
+    border-radius: 20px;
+    width: 100%;
     height: 2em;
     font-family: var(--title-font);
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     color: var(--bg-color);
     background: linear-gradient(90deg, #6173E6 0%, #CBD1F8 100%);

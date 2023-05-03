@@ -22,7 +22,7 @@ const LoginForm = () => {
                 <input type="text" name="username" id="username" placeholder="Username" onChange={handleUsername} value={chosenUsername} required/>
                 <input type="password" name="password" id="password" placeholder="Password" onChange={handlePassword} value={password} required/>
             </div>
-            <Link to="/"><input type="submit" value="Login" /></Link>
+            <Link to="/"><button>Login</button></Link>
         </form> 
         
     )

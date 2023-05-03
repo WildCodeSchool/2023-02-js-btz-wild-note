@@ -25,7 +25,9 @@
     color: var(--dark-font);
     font-weight: 600;
     font-size: 1em;
+    cursor: pointer;
 }
+.favorites>button:hover {box-shadow: var(--general-innerShadow);}
 
 .favorites-container>h2{
     padding-left: 5%;

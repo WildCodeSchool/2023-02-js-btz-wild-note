@@ -7,7 +7,17 @@ import "./YourProfile.css";
 
 const YourProfile = (props) => {
 
+    const [newUsername, setUsername] = useState("")
+    const [changeDesc, setChangeDesc] = useState("")
     const [form, setForm] = useState(false)
+
+    const handleNewUsername = (e) => {
+        setUsername(e.target.value)   
+    }
+    const handleNewDescription = (e) => {
+        setChangeDesc(e.target.value)   
+    }
+
     const toggleForm = () => {
         setForm(!form);
     };
@@ -18,7 +28,7 @@ const YourProfile = (props) => {
                 <div className='cancel-btn'>
                     <IoIosClose className='cancel-icon' onClick={toggleForm}/>
                 </div>
-                <div className='form'><ModifyProfile /></div>
+                <ModifyProfile newUsername={newUsername} changeDesc={changeDesc} handleNewUsername={handleNewUsername} handleNewDescription={handleNewDescription} toggleForm={toggleForm}/>
             </div>  : 
             <><div className='modify-pen'>
                 <BsFillPencilFill className='pen' onClick={toggleForm}/>
@@ -27,9 +37,9 @@ const YourProfile = (props) => {
                 <span>Profile Pic</span>
             </div>
             <div className="profile-infos">
-                <h2></h2> 
-                <h3>Description</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut porro sint iusto dolore molestias praesentium quo neque quam, cumque aspernatur repudiandae rem explicabo nesciunt accusamus eaque quasi optio illo.</p>
+                <h2>{newUsername}</h2> 
+                <h3>Your info</h3>
+                <p>{changeDesc}</p>
             </div></>
             }
         </div>

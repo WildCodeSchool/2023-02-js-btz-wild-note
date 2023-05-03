@@ -18,7 +18,6 @@
     flex-direction: column;
     box-shadow: var(--main-card-effect);
     border-radius: 8px;
-    
 }
 
 .Card-container span {

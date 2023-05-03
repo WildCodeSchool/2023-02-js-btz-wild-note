@@ -21,7 +21,7 @@
     font-family: var(--main-font)
 }
 
-.login-form-container a input[type="submit"] {
+.login-form-container a button {
     height: 2em;
     font-family: var(--title-font);
     font-size: 1.5em;

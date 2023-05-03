@@ -66,7 +66,7 @@ const SignUp = () => {
                 <input type="password" name="password" id="confirmPwd" placeholder="Confirm password" onChange={handleConfirmPwd} value={confirmPwd} required/>
                 <p className={confirmPwd === password ? "correct-pwd" : "error-message"}>Error: passwords must match</p>
             </div>
-            <Link to="/preference"><input type="submit" value="Sign Up" /></Link>
+            <Link to="/preference"><button>Sign Up</button></Link>
         </form> 
         
     )

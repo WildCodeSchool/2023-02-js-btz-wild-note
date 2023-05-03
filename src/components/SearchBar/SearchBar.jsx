@@ -2,7 +2,7 @@ import { React, useState} from 'react';
 import { IoIosSearch } from "react-icons/io";
 import "./SearchBar.css";
 import { Link } from 'react-router-dom';
-import { FaPaperPlane } from 'react-icons/fa';
+import { FaPaperPlane, FaSearch } from 'react-icons/fa';
 
 
 
@@ -16,7 +16,7 @@ const SearchBar = () => {
 
   return (
     <div className='SearchBar'>
-      <div className='logo-search'><IoIosSearch style={{ fill: "#bebebe", border: "none", height: '1.5em', width: '1.5em'}} /></div>
+      <div className='logo-search'><FaSearch style={{ fill: "#bebebe", border: "none", height: '1.2em', width: '1.2em'}} /></div>
       <input
         className="SearchText"
         type="text"

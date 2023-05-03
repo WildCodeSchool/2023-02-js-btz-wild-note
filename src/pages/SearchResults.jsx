@@ -35,12 +35,11 @@ const SearchResults = () => {
             <div className={`${objKey}-search-container`}>
               {
                 results[objKey].items.map(elem => 
-                <div className={`${objKey}-item`}>
                   <div className={`${objKey}-card-container`}>
                     <div className={`${objKey}-img-container`}>{!!(elem.images && elem.images.length) && <img src={elem.images[0].url}/>}</div>
                     <div className='title-container'><h3>{elem.name}</h3></div>
                   </div>
-                </div>)
+                )
               }
             </div>
         </div>

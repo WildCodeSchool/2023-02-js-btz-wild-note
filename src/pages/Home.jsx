@@ -6,14 +6,14 @@ import YourArtists from '../components/YourArtists/YourArtists';
 import './Home.css';
 
 
-const Home = () => {
+const Home = ({genres, selectedGenres}) => {
 
   return (
     <div className='Home'>
         <div  className='logo-home'>
           <img src={Logo} alt='logo'/>
         </div>
-        <Recommendations />
+        <Recommendations genres={genres} selecteGenres={selectedGenres} />
         <YourArtists />
         <Navbar />
     </div>

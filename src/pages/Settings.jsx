@@ -16,6 +16,9 @@ const Settings = () => {
             <div className='options-container'>
                 <Link to="/settings/profile"><h2>My profile</h2></Link>
             </div>
+            <div className='deconnect-container'>
+                <Link to="/login"><h2>Deconnect</h2></Link>
+            </div>
             <Navbar />
         </div>
         

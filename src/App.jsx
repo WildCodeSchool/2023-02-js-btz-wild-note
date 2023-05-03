@@ -8,7 +8,6 @@ import Login from './pages/Login';
 import PreferencePage from './pages/PreferencePage';
 import Settings from './pages/Settings';
 import Profile from './pages/Profile';
-
 import Player from './pages/Player';
 import SearchPages from './pages/SearchPages'
 import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
@@ -44,7 +43,7 @@ function App() {
         <Route path='/settings' element={<Settings />}/>
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
-        <Route path='/search/:result' element={<SearchResults />} />
+        <Route path='/search/:research' element={<SearchResults />} />
         <Route path='/album' element={<PageAlbum/>}/>
         <Route path='/Player' element={<Player />} />
       </Routes>

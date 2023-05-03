@@ -1,15 +1,17 @@
-import { React, useState } from 'react';
+import { React, useState} from 'react';
 import { IoIosSearch } from "react-icons/io";
 import "./SearchBar.css";
 import { Link } from 'react-router-dom';
 import { FaPaperPlane } from 'react-icons/fa';
 import mini_logo from '../../assets/logo-sanstexte.png';
+import axios from 'axios';
 
 
 const SearchBar = () => {
 
   const [search, setSearch] = useState('');
   console.log(search);
+
 
 
   return (

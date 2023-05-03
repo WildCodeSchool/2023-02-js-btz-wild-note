@@ -14,20 +14,31 @@
     align-items: center;
 }
 
-.favorites>button {
+.favorites a  {
     width: 40%;
     height: 100%;
     background: var(--bg-color);
     box-shadow: var(--main-card-effect);
     border-radius: 25px;
     border-style: none;
-    font-family: var(--main-font);
-    color: var(--dark-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;  
+}
+.favorites a button {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 25px;
+    border-style: none;
     font-weight: 600;
     font-size: 1em;
+    font-family: var(--main-font);
+    color: var(--dark-font);
     cursor: pointer;
 }
-.favorites>button:hover {box-shadow: var(--general-innerShadow);}
+
+.favorites>a:hover {box-shadow: var(--general-innerShadow);}
 
 .favorites-container>h2{
     padding-left: 5%;

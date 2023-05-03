@@ -14,7 +14,9 @@ import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
 import SearchResults from './pages/SearchResults';
 import PageAlbum from './pages/PageAlbum';
 import SignUpPage from './pages/SignUp';
-import Playlist from './pages/Playlist';
+import FavoriteArtists from './pages/FavoriteArtists';
+import FavoriteAlbums from './pages/FavoriteAlbums';
+
 
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
@@ -47,7 +49,8 @@ function App() {
         <Route path='/search/:research' element={<SearchResults />} />
         <Route path='/album' element={<PageAlbum/>}/>
         <Route path='/library/playlists/:playlistName' element={<Library />} />
-
+        <Route path='/library/favorite-artists' element={<FavoriteArtists />} />
+        <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
       </Routes>
     </Router>
   );

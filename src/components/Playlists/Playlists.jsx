@@ -26,7 +26,7 @@ const Playlists = ({displayForm, setDisplayForm, newPlaylist, setNewPlaylist, fl
         </div> : <></>}
       
       <div className='playlist-cards'>
-        <Link to={`/playlists/your-favorites`}><div className="playlist-card">
+        <Link to={`/library/your-favorites`}><div className="playlist-card">
             <div className='card-front'>
               <span></span>
               <h3>Your Favorites</h3>  
@@ -34,7 +34,7 @@ const Playlists = ({displayForm, setDisplayForm, newPlaylist, setNewPlaylist, fl
             </div>
         </div></Link>  
           {newPlaylist.map((playlist, index) => (
-            <Link to={`/playlists/${playlist.name}`}><div key={index} className={`playlist-card 
+            <Link to={`/library/${playlist.name}`}><div key={index} className={`playlist-card 
             ${flipCard === -1 ? "" : flipCard === index + 1 ? "flipped" : ""}`} 
             >
               <div className='card-front'>

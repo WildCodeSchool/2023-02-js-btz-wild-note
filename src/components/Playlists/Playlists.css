@@ -81,13 +81,16 @@
 }
 
 .playlist-cards {
-    width: 75%;
+    height: 73%;
+    width: 80%;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-flow: row wrap;
+    overflow: scroll;
 }
+.playlist-cards::-webkit-scrollbar {display: none;}
 .playlist-cards a {text-decoration: none; color: var(--dark-font);}
 
 .playlist-card {
@@ -132,6 +135,7 @@
 }
 
 .playlist-card .card-front .more-container {
+    height: 5%;
     width: 100%;
     grid-row: 1;
     grid-column: 2;

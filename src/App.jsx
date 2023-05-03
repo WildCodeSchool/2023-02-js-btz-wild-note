@@ -13,7 +13,8 @@ import SearchPages from './pages/SearchPages'
 import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
 import SearchResults from './pages/SearchResults';
 import PageAlbum from './pages/PageAlbum';
-import SignUpPage from './pages/SignUp';;
+import SignUpPage from './pages/SignUp';
+import Playlist from './pages/Playlist';
 
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
@@ -45,7 +46,8 @@ function App() {
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
         <Route path='/album' element={<PageAlbum/>}/>
-        <Route path='/Player' element={<Player />} />
+        <Route path='/library/playlists/:playlistName' element={<Library />} />
+
       </Routes>
     </Router>
   );

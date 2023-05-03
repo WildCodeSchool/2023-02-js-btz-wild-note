@@ -22,6 +22,7 @@ const Playlists = () => {
     const playlist = { name, description };
     setNewPlaylist([...newPlaylist, playlist]);
     e.target.reset();
+    toggleForm()
   };
 
   const handleFlipCard = (index) => {

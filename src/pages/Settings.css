@@ -1,10 +1,9 @@
 .settings-page {
-    height: 100%;
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-flow: column wrap;
 }
 
 .settings-page img {
@@ -12,8 +11,13 @@
     margin: 1em 0 2em 0;
 }
 
-.options-container a {text-decoration: none;}
+.settings-page .options-container, .settings-page .settings-container{
+    margin: 1em;
+}
 
-.options-container h2:hover {
+.settings-page a {text-decoration: none;}
+
+h2:hover{
     color: var(--main-color);
 }
+

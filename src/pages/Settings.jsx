@@ -6,17 +6,20 @@ import "./Settings.css";
 import ThemeSwitchDisco from '../components/SettingsFeatures/ThemeSwitchDisco';
 import ThemeSwitch from '../components/SettingsFeatures/ThemeSwitch';
 
-const Settings = () => {
+const Settings = ({...props}) => {
     return(
         <div className="settings-page">
            <div className="logo-container">
                 <img src={logoavectexte} alt="logo wildnote" />
             </div>
             <div className='settings-container'>
-                <ThemeSwitch />
+                <ThemeSwitch {...props} />
             </div>
             <div className='options-container'>
                 <Link to="/settings/profile"><h2>My profile</h2></Link>
+            </div>
+            <div className='deconnect-container'>
+                <Link to="/login"><h2>Deconnect</h2></Link>
             </div>
             <Navbar />
         </div>

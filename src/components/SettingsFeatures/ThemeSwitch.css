@@ -5,9 +5,10 @@
     display: flex;
     margin: 0.6em;
 }
-.dark-btn {
-    
-}
+
+.dark-theme {
+    background: #5e6366;
+  }
 
 .btn-mode-container {
     display: flex;

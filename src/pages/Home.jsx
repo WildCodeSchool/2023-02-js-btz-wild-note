@@ -8,8 +8,7 @@ import './Home.css';
 import  { ThemeContext } from '../components/SettingsFeatures/ThemeProvider';
 
 
-const Home = () => {
-  const {isLight}= useContext(ThemeContext)
+const Home = ({genres, selectedGenres}) => {
 
   return (
     <>
@@ -17,7 +16,7 @@ const Home = () => {
         <div  className='logo-home'>
           <img src={Logo} alt='logo'/>
         </div>
-        <Recommendations />
+        <Recommendations genres={genres} selecteGenres={selectedGenres} />
         <YourArtists />
         <Navbar />
     </div>

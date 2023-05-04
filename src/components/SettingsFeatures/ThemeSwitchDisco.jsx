@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import randomColor from 'randomcolor';
 
 
-const DiscoMode=()=> {
-  const [isDiscoModeActive, setIsDiscoModeActive] = useState(true);
+const DiscoMode=({isDiscoModeActive,setIsDiscoModeActive})=> {
+  
   const [Color, setColor] = useState('');
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const DiscoMode=()=> {
 
   return (
     <div style={{ Color }} className='disco-button'>
-      <div className={isDiscoModeActive ? 'discotheme' : null} onClick={handleToggleDiscoMode}>
+      <div  onClick={handleToggleDiscoMode}>
         {isDiscoModeActive ? 'Disco On' : 'Disco Off'}
       </div>
     </div>

@@ -13,8 +13,7 @@
 }
 
 .login-container {
-    height: 25em;
-    width: 20em;
+    width: 75%;
     padding: 2.5em 1.2em;
     display: flex;
     align-items: center;
@@ -29,5 +28,6 @@ h2 {font-family: var(--title-font);}
 h2.welcome {color: var(--main-color)}
 h2.back {color: var(--secondary-color); margin-bottom: 1em;}
 
-.login-sentence { margin-top: 2em; color: var(--light-font)}
+.login-sentence { margin-top: 2em; color: var(--light-font); text-align: center;}
 .login-sentence span { font-weight: bold; cursor: pointer;}
+.login-sentence a {text-decoration: none; color: var(--light-font) ;}

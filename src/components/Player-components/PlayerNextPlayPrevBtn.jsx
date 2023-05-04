@@ -73,8 +73,8 @@ const PlayerNextPlayPrevBtn = () => {
     return (
         <div className='PlayerNextPlayPrevBtn'>
 
-            <audio id='player'>
-                <source src="https://p.scdn.co/mp3-preview/788a028fa3a33141c817b1064e3159006edeaa8d?cid=3123a573de044583b8cdbb3f1de35a70"
+            <audio id='player'  onEnded={handleEnded}>
+                <source src=/*{tracks[currentTrackIndex]?.url}*/  "https://p.scdn.co/mp3-preview/788a028fa3a33141c817b1064e3159006edeaa8d?cid=3123a573de044583b8cdbb3f1de35a70"
                 ></source>
             </audio>
 

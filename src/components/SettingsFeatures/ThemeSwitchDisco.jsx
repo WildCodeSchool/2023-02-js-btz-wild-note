@@ -1,18 +1,18 @@
-import './ThemeDisco.css';
+import './ThemeSwitchDisco.css';
 import React, { useState, useEffect } from 'react';
 import randomColor from 'randomcolor';
 
 
-function DiscoMode() {
-  const [isDiscoModeActive, setIsDiscoModeActive] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState('');
+const DiscoMode=()=> {
+  const [isDiscoModeActive, setIsDiscoModeActive] = useState(true);
+  const [Color, setColor] = useState('');
 
   useEffect(() => {
     let intervalId;
 
     if (isDiscoModeActive) {
       intervalId = setInterval(() => {
-        setBackgroundColor(randomColor());
+        setColor(randomColor());
       }, 300);
     }
 
@@ -24,10 +24,10 @@ function DiscoMode() {
   };
 
   return (
-    <div style={{ backgroundColor }}>
-      <button className="disco-button" onClick={handleToggleDiscoMode}>
-        {isDiscoModeActive ? 'Disable Disco Mode' : 'Enable Disco Mode'}
-      </button>
+    <div style={{ Color }} className='disco-button'>
+      <div className={isDiscoModeActive ? 'discotheme' : null} onClick={handleToggleDiscoMode}>
+        {isDiscoModeActive ? 'Disco On' : 'Disco Off'}
+      </div>
     </div>
   );
 }

@@ -1,4 +1,21 @@
-.disco-button {
-    background-color: var(--light-font);
-    color: var(--main-color);
-}
+
+
+
+  .disco-button  {
+    font-family: var(--title-font);
+    color: var(--light-font);
+    margin: 0.6em;
+    font-weight: bold;
+    border-radius: 0.6em;
+  }
+  
+  .disco-button:hover {
+      color: var(--main-color);
+    }
+  /* .rainbow-font {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  } */

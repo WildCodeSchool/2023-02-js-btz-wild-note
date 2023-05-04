@@ -1,4 +1,6 @@
 import './App.css';
+import { useState } from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Library from './pages/Library';
@@ -6,19 +8,33 @@ import Login from './pages/Login';
 import PreferencePage from './pages/PreferencePage';
 import Settings from './pages/Settings';
 import Profile from './pages/Profile';
-import Navbar from './components/navbar/Navbar';
-import SearchBar from './components/SearchBar/SearchBar';
+
 import Player from './pages/Player';
 import SearchPages from './pages/SearchPages'
 import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
 import SearchResults from './pages/SearchResults';
 import PageAlbum from './pages/PageAlbum';
+import ThemeProvider from './components/SettingsFeatures/ThemeProvider';
+
+
 
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
 function App() {
+  const [isLight, setIsLight] = useState(false);
+
+  const toggleTheme = () => {
+    setIsLight(!isLight);
+  };
+  
+
   return (
+   
+      
+        
+     <ThemeProvider  value={{ isLight, toggleTheme }}> 
     <Router>
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
@@ -33,7 +49,9 @@ function App() {
         <Route path='/album' element={<PageAlbum/>}/>
         <Route path='/Player' element={<Player />} />
       </Routes>
+      
     </Router>
+    </ThemeProvider>
   );
 }
 export default App;

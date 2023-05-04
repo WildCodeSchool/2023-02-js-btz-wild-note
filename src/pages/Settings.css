@@ -13,3 +13,7 @@
 }
 
 .options-container a {text-decoration: none;}
+
+.options-container h2:hover {
+    color: var(--main-color);
+}

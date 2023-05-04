@@ -17,24 +17,6 @@
     
 }
 
-.disco-mode * {
-    animation: disco 1s linear infinite;
-  }
-  
-  @keyframes disco {
-    0% {
-      background-color: red;
-      color: white;
-    }
-    50% {
-      background-color: green;
-      color: yellow;
-    }
-    100% {
-      background-color: blue;
-      color: pink;
-    }
-  }
 
 /* INITIALIZATION*/
 
@@ -51,6 +33,33 @@ body{
  background-color: var(--bg-color);
  font-size: 16px;
 }
+
+.light-theme {
+  background-color: var(--bg-color)
+}
+
+.dark-theme {
+  background: #5e6366;
+}
+
+ .discotheme  {
+    animation: disco 1s linear infinite;
+  }  
+  
+   @keyframes disco {
+    30% {
+      background-color: rgb(255, 0, 166);
+      color: white;
+    }
+    40% {
+      background-color: rgb(35, 248, 35);
+      color: rgb(252, 252, 42);
+    }
+    60% {
+      background-color: rgb(46, 237, 244);
+      color: rgb(233, 191, 198);
+    }
+  }
 
 #root{
     width: 100%;

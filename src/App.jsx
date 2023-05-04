@@ -24,6 +24,8 @@ const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 function App() {
   const [genres, setGenres] = useState([])
   const [selectedGenres, setSelectedGenres] = useState([])
+  const [favoriteTrack, setFavoriteTrack] = useState([])
+
   useEffect(() => {
     axios.get("https://api.spotify.com/v1/recommendations/available-genre-seeds", {
         headers: {
@@ -48,10 +50,10 @@ function App() {
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
-        <Route path='/album/:id' element={<PageAlbum/>}/>
+        <Route path='/album/:id' element={<PageAlbum favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack} />}/>
         <Route path='/Player' element={<Player />} />
         <Route path='/library/:playlistName' element={<Library />} />
-        <Route path='/library/your-favorites' element={<YourFavorites />} />
+        <Route path='/library/your-favorites' element={<YourFavorites favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack}/>} />
         <Route path='/library/favorite-artists' element={<FavoriteArtists />} />
         <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
       </Routes>

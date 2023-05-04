@@ -3,16 +3,17 @@ import axios from 'axios'
 import '../pages/PageAlbum.css'
 import Logo from '../assets/logo-sanstexte.png';
 import Navbar from '../components/navbar/Navbar';
-import { useParams} from 'react-router-dom';
+import { useParams, Link, useNavigate} from 'react-router-dom';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
 import { BsPlayFill } from 'react-icons/bs';
+import { IoIosArrowBack } from 'react-icons/io';
 
 
-const PageAlbum = () => {
+const PageAlbum = ({favoriteTrack, setFavoriteTrack}) => {
 
   const [album, setAlbum] = useState({})
   const {id} = useParams();
-
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios
@@ -33,9 +34,16 @@ const PageAlbum = () => {
       return `${min}:${sec}`
     }
 
+    const previousPage = () => {
+      navigate(-1);
+    }
+
   return (
     <div className='PageAlbum'>
-      <img className='logo-back-home' src={Logo}/>
+      <div className='page-album-header'>
+        <img className='logo-back-home' src={Logo}/>
+        <IoIosArrowBack className='back-arrow' onClick={previousPage}/>
+      </div>
       <h3>{album.artists && album.artists[0].name}</h3>
       <div className='album-cover'>
         <img src={album.images && album.images[0].url}/>
@@ -51,7 +59,7 @@ const PageAlbum = () => {
         {album.tracks && album.tracks.items.map((track)=> 
           <li key={track.id} className='track'>
             <div className='favorite-btn-container'>
-              <FavoriteButton style={{width: '1.4em'}}/>
+              <FavoriteButton style={{width: '1.4em'}} favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack} track={track}/>
             </div>
             <div className='track-infos-container'>
               <p className='track-name'>{track.name}</p>

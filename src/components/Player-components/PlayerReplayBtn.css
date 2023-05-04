@@ -1,31 +1,39 @@
-.PlayerReplayBtn path:nth-child(1),
-.PlayerReplayBtn path:nth-child(2) {
-    fill: var(--secondary-color);
-}
-
-
-.PlayerReplayBtn {
+.repeat-btn-container,
+.unrepeat-btn-container {
+    width: 3.2em;
+    height: 3.2em;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 20%;
-    margin-bottom: 1em;
     border-radius: 50%;
-}
-
-
-.replay-btn {
-    width: 2.7em;
-    height: 2.7em;
     background-color: var(--bg-color);
-    border-radius: 50%;
     box-shadow: var(--main-card-effect);
 
 }
-
-.PlayerReplayBtn svg {
-    margin-bottom: 1em;
-    width: 20%;
+.repeat-btn-container svg {
+    padding: 0.5em;
     box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
     border-radius: 50%;
+}
+.unrepeat-btn-container svg {
+    padding: 0.5em;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px #6173e5;
+}
 
+.repeat-btn-container path:nth-child(1),
+.repeat-btn-container path:nth-child(2) {
+    fill: var(--secondary-color);
+}
+
+.unrepeat-btn-container path:nth-child(1),
+.unrepeat-btn-container path:nth-child(2) {
+    fill: var(--bg-color);
+}
+
+.repeat-btn-container>.repeat-btn,
+.unrepeat-btn-container>.unrepeat-btn {
+    width: 3em;
+    height: 3em;
 }

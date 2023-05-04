@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './FavoriteButton.css';
 import { BsFillHeartFill } from 'react-icons/bs'
 
-const FavoriteButton = () => {
+const FavoriteButton = ({track, favoriteTrack, setFavoriteTrack}) => {
 
   const [favorite, setFavorite] = useState(false);
 
   const addFavorite = () => {
     setFavorite(!favorite);
+    setFavoriteTrack([...favoriteTrack, track])
   }
 
   // const favorites = localStorage.setItems('favorite', JSON.stringify(favorite));

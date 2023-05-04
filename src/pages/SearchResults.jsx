@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import './SearchResults.css';
+import Logo from '../assets/logo-sanstexte.png';
+import { IoIosArrowBack } from 'react-icons/io';
+import Navbar from '../components/navbar/Navbar'
 import axios from 'axios';
 import Navbar from '../components/navbar/Navbar';
 
@@ -10,7 +13,7 @@ const SearchResults = () => {
   const [results, setResults] = useState({})
 
   const {research} = useParams();
-
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios
@@ -26,11 +29,17 @@ const SearchResults = () => {
   }, []);
 
 
-
   const objKeys = Object.keys(results) // ['album', 'artist']
+  const previousPage = () => {
+    navigate(-1);
+  }
 
   return (
     <div className='search-results'>
+      <div className='results-page-header'>
+        <IoIosArrowBack className='back-arrow' onClick={previousPage}/>
+        <img className='logo-back-home' src={Logo}/>
+      </div>
       { objKeys.map((objKey) => (
         <div key={`${objKey}-container`} className={`${objKey}-container`}>
             <h2 style={{textTransform: 'uppercase'}}>{objKey}</h2>

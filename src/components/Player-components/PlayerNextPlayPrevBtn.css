@@ -2,26 +2,12 @@
     display: flex;
     width: 60%;
     justify-content: space-evenly;
-    margin-bottom: 1em;
     align-items: center;
 }
-
-
 
 .PlayerNextPlayPrevBtn path:nth-child(2),
 .PlayerNextPlayPrevBtn path:nth-child(3) {
     fill: var(--secondary-color);
-}
-
-.play-btn {
-    width: 4.7em;
-    height: 4.7em;
-    background-color: var(--bg-color);
-    border-radius: 50%;
-    box-shadow: var(--main-card-effect);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .PlayerNextPlayPrevBtn svg {
@@ -29,13 +15,6 @@
     border-radius: 50%;
     box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
 
-}
-
-
-
-
-button {
-    border: none;
 }
 
 .play-btn-prev {
@@ -47,4 +26,26 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.PlayerNextPlayPrevBtn>.play-btn-container, .PlayerNextPlayPrevBtn>.pause-btn-container {
+    width: 4em;
+    height:4em;
+}
+.PlayerNextPlayPrevBtn>.play-btn-container>.play-btn,
+.PlayerNextPlayPrevBtn>.pause-btn-container>.pause-btn {
+    height: 3.8em;
+    width: 3.8em;
+    
+}
+.PlayerNextPlayPrevBtn>.play-btn-container svg {
+    padding: 0.5em;
+    border-radius: 50%;
+    box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
+}
+.PlayerNextPlayPrevBtn>.pause-btn-container svg {
+    padding: 0.5em;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px #6173e5;
 }

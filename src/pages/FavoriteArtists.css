@@ -1,0 +1,45 @@
+.fav-artists-page {
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fav-artists-header>h1 {
+    width: 100%;
+    margin: 1em 0;
+    padding: 1em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 14px;
+    background-color: var(--bg-color);
+    box-shadow: var(--main-card-effect);
+    font-family: var(--title-font);
+    color: var(--dark-font);
+}
+
+.fav-artists-container {width: 100%;}
+
+.artists-list .artist-container {
+    width: 100%;
+    margin: 1.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+
+}
+
+.artists-list .artist-container span {
+    height: 3em;
+    width: 3em;
+    background-color: var(--secondary-color);
+    box-shadow: var(--main-card-effect);
+    border-radius: 50%;
+}
+

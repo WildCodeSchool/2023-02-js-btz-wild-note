@@ -1,25 +1,13 @@
 import React, {useState} from 'react'
-import {IoIosClose} from 'react-icons/io'
+import { Link, useParams } from 'react-router-dom'
+import { BsFillPencilFill } from 'react-icons/bs'
+import {MdDelete} from 'react-icons/md'
+import {IoMdShare, IoIosMore} from 'react-icons/io'
 import '../Playlists/Playlists.css';
 
 
-const Playlists = () => {
-
-  const [displayForm, setDisplayForm] = useState(false)
-  const [newPlaylist, setNewPlaylist] = useState([])
-
-  const toggleForm = () => {
-    setDisplayForm(!displayForm);
-  };
-
-  const handleAddPlaylist = (e) => {
-    e.preventDefault();
-    const name = e.target.elements['playlist-name'].value;
-    const description = e.target.elements['description'].value;
-    const playlist = { name, description };
-    setNewPlaylist([...newPlaylist, playlist]);
-    e.target.reset();
-  };
+const Playlists = ({displayForm, setDisplayForm, newPlaylist, setNewPlaylist, flipCard, setFlipCard, 
+  toggleForm, handleAddPlaylist, handleFlipCard, handleRemovePlaylist}) => {
 
   return (
     <div className='playlists-container'>
@@ -38,16 +26,33 @@ const Playlists = () => {
         </div> : <></>}
       
       <div className='playlist-cards'>
-        {newPlaylist.map((playlist, index) => (
-          <div key={index} className='playlist-card'>
-            <div className='close-btn'>
-              <IoIosClose />
+        <Link to={`/library/your-favorites`}><div className="playlist-card">
+            <div className='card-front'>
+              <span></span>
+              <h3>Your Favorites</h3>  
+              <p>All the tracks you liked!</p>
             </div>
-            <span></span>
-            <h3>{playlist.name}</h3>  
-            <p>{playlist.description}</p>
-          </div>
-        ))}
+        </div></Link>  
+          {newPlaylist.map((playlist, index) => (
+            <Link to={`/library/${playlist.name}`}><div key={index} className={`playlist-card 
+            ${flipCard === -1 ? "" : flipCard === index + 1 ? "flipped" : ""}`} 
+            >
+              <div className='card-front'>
+                  <div className='more-container'>
+                    <IoIosMore className='more-btn'onClick={() => handleFlipCard(index +1)}/>
+                  </div>
+                  <span></span>
+                  <h3>{playlist.name}</h3>  
+                  <p>{playlist.description}</p>
+                </div>
+                <div className='card-back'>
+                  <IoIosMore className='playlist-icons' onClick={() => handleFlipCard(index +1)}/>
+                  <BsFillPencilFill className='playlist-icons'/>
+                  <MdDelete className='playlist-icons' onClick={() => handleRemovePlaylist(index)}/>
+                  <IoMdShare className='playlist-icons'/>
+                </div>
+            </div></Link>
+        ))} 
       </div>
     </div>
   )

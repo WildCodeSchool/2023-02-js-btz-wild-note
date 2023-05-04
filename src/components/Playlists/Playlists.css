@@ -12,8 +12,8 @@
 }
 
 .add-playlist-btn {
-    width: 1.5em;
-    height: 1.5em;
+    width: 2em;
+    height: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@
     font-family: var(--main-font);
     color: var(--dark-font);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
@@ -74,6 +74,7 @@
     padding: 0.5em;
     border-radius: 14px;
     background-color: transparent;
+    border: none;
     margin: 1em auto;
     font-family: var(--main-font);
     box-shadow: var(--main-card-effect);

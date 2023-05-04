@@ -7,7 +7,7 @@ import PlayBtn from '../components/Player-components/PlayBtn';
 import PlayerShuffle from '../components/Player-components/PlayerShuffle';
 import './YourFavorites.css';
 
-const YourFavorites = () => {
+const YourFavorites = ({favoriteTrack, setFavoriteTrack}) => {
     const [displayOptions, setDisplayOptions] = useState(false);
 
     const toggleOptions = () => {
@@ -29,10 +29,18 @@ const YourFavorites = () => {
             <span></span>
             <div className='playlist-header'>
                 <PlayerShuffle />
-                <h1>Your Favorites</h1>
+                <h1>My Favorites</h1>
                 <PlayBtn />
             </div>
-            
+            <div className='favorite-tracks-container'>
+                {favoriteTrack.map((track) => /* {
+                    
+                    <span></span> */<div key={track} className='track-container'>
+                        <span></span>
+                    <h3 className='track-name'>{track}</h3></div> 
+                    /* 
+                } */)}
+            </div>
 
             <Navbar /> 
         </div>

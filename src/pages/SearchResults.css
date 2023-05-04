@@ -15,7 +15,8 @@
     overflow: scroll;
 }
 .albums-search-container::-webkit-scrollbar,
-.artists-search-container::-webkit-scrollbar
+.artists-search-container::-webkit-scrollbar,
+.tracks-search-container::-webkit-scrollbar
 {display: none;}
 
 .albums-card-container{

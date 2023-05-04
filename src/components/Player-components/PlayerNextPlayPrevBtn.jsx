@@ -1,12 +1,8 @@
-import React from 'react'
-import { BsPlayFill } from 'react-icons/bs'
-import { TbPlayerTrackPrevFilled } from 'react-icons/tb'
-import { TbPlayerTrackNextFilled } from 'react-icons/tb'
+import { TbPlayerTrackPrevFilled, TbPlayerTrackNextFilled } from 'react-icons/tb'
+import PlayBtn from './PlayBtn'
 import './PlayerNextPlayPrevBtn.css'
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
-
 
 const PlayerNextPlayPrevBtn = () => {
     const { id } = useParams(); // récupère l'id de l'album à partir de l'URL
@@ -86,10 +82,7 @@ const PlayerNextPlayPrevBtn = () => {
                 <TbPlayerTrackPrevFilled style={{ height: '3.5em', width: '3.5em' }} onClick={handlePrev} />
             </div>
 
-
-            <div className='play-btn'>
-                <BsPlayFill style={{ height: '4.5em', width: '4.5em', fill: "#cbd1F8" }} onClick={handlePlay} />
-            </div>
+            <PlayBtn handlePlay={handlePlay} isPlaying={isPlaying} />          
 
             <div className='play-btn-prev'>
                 <TbPlayerTrackNextFilled style={{ height: '3.5em', width: '3.5em', }} onClick={handleNext} />

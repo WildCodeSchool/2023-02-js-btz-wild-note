@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './ArtistPage.css';
 import Logo from '../assets/logo-sanstexte.png';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
 import { BsPlayFill } from 'react-icons/bs';
+import {IoIosArrowBack} from 'react-icons/io';
 import Navbar from '../components/navbar/Navbar';
 
 
@@ -14,7 +15,7 @@ const ArtistPage = () => {
     const [tracks, setTracks] = useState([]);
     const [albums, setAlbums] = useState([]);
     const {id} = useParams();
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios
@@ -56,16 +57,22 @@ const ArtistPage = () => {
         return `${min}:${sec}`
       }
 
+    const previousPage = () => {
+        navigate(-1);
+    }
   return (
     <div className='ArtistPage'>
-        <img className='logo-back-home' src={Logo}/>
+        <div className='page-album-header'>
+            <img className='logo-back-home' src={Logo}/>
+            <IoIosArrowBack className='back-arrow' onClick={previousPage}/>
+        </div>
         <h3>{artist.name}</h3>
         <div className='artist-img'>
             <img src={artist.images && artist.images[0].url} />
         </div>
         <div className='artist-btn-container'>
             <div className='artist-favorite-btn'>
-                <FavoriteButton />
+                <FavoriteButton type={"artist"} id={artist.id}/>
             </div>
             <div className='artist-play-btn'>
                 <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
@@ -75,7 +82,7 @@ const ArtistPage = () => {
             {tracks.map(track => 
                 <li key={track.id} className='track'>
                     <div className='favorite-btn-container'>
-                    <FavoriteButton style={{width: '1.4em'}}/>
+                    <FavoriteButton style={{width: '1.4em'}} type={"track"} id={track.id} />
                     </div>
                     <div className='track-infos-container'>
                     <p className='track-name'>{track.name}</p>

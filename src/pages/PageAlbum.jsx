@@ -1,18 +1,19 @@
 import { React, useState, useEffect } from 'react'
 import axios from 'axios'
-import '../pages/PageAlbum.css'
+import './PageAlbum.css'
 import Logo from '../assets/logo-sanstexte.png';
 import Navbar from '../components/navbar/Navbar';
-import { useParams} from 'react-router-dom';
+import { useParams, Link, useNavigate} from 'react-router-dom';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
 import { BsPlayFill } from 'react-icons/bs';
+import { IoIosArrowBack } from 'react-icons/io';
 
 
-const PageAlbum = () => {
+const PageAlbum = ({favoriteTrack, setFavoriteTrack}) => {
 
   const [album, setAlbum] = useState({})
   const {id} = useParams();
-
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios
@@ -33,17 +34,26 @@ const PageAlbum = () => {
       return `${min}:${sec}`
     }
 
+    const previousPage = () => {
+      navigate(-1);
+    }
+
   return (
     <div className='PageAlbum'>
-      <img className='logo-back-home' src={Logo}/>
+      <div className='page-album-header'>
+        <img className='logo-back-home' src={Logo}/>
+        <IoIosArrowBack className='back-arrow' onClick={previousPage}/>
+      </div>
       <h3>{album.artists && album.artists[0].name}</h3>
       <div className='album-cover'>
         <img src={album.images && album.images[0].url}/>
       </div>
       <div className='album-title'>
-        <FavoriteButton />
+        <div className='album-favorite-btn'>
+          <FavoriteButton />
+        </div>
         <h4>- {album.name} -</h4>
-        <div className='play-btn-mini'>
+        <div className='album-play-btn'>
           <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
         </div>
       </div>
@@ -51,29 +61,20 @@ const PageAlbum = () => {
         {album.tracks && album.tracks.items.map((track)=> 
           <li key={track.id} className='track'>
             <div className='favorite-btn-container'>
-              <FavoriteButton style={{width: '1.4em'}}/>
+              <FavoriteButton style={{width: '1.4em'}} favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack} track={track}/>
             </div>
             <div className='track-infos-container'>
               <p className='track-name'>{track.name}</p>
               <p className='duration'>{duration(track.duration_ms)}</p>
             </div>
             <div className='btn-play-container'>
-              <div className='play-btn-mini'>
+              <div className='play-btn-track'>
                 <BsPlayFill style={{ height: '1.4em', width: '1.4em', fill: "#cbd1F8" }} />
               </div>
             </div>
           </li>
         )}
       </ul>
-
-
-      {/* {covers.length > 0 && <img src={covers[0]} alt='cover' key={covers[0]} className='album-cover'/>}
-     
-      <h2>Titre album </h2>
-      
-      <div className='track-list'>
-        {titleLists.map((trackName) => <p key={trackName} className='track'>{trackName}</p>)}
-      </div> */}
       <Navbar />
     </div>
   )

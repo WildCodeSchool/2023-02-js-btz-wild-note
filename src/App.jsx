@@ -17,6 +17,7 @@ import SignUpPage from './pages/SignUp';
 import YourFavorites from './pages/YourFavorites';
 import FavoriteArtists from './pages/FavoriteArtists';
 import FavoriteAlbums from './pages/FavoriteAlbums';
+import ArtistPage from './pages/ArtistPage';
 
 
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
@@ -48,7 +49,8 @@ function App() {
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
-        <Route path='/album/:id' element={<PageAlbum/>}/>
+        <Route path='/albums/:id' element={<PageAlbum/>}/>
+        <Route path='/artists/:id' element={<ArtistPage />} />
         <Route path='/Player' element={<Player />} />
         <Route path='/library/:playlistName' element={<Library />} />
         <Route path='/library/your-favorites' element={<YourFavorites />} />

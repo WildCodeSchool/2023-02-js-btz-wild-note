@@ -2,7 +2,7 @@ import logoavectexte from '../assets/logo-avectexte.png';
 import GenreList from '../components/Preference/GenreList';
 import './PreferencePage.css';
 
-const PreferencePage = () => {
+const PreferencePage = ({genres, selectedGenres, setSelectedGenres}) => {
     return(
         <div className="preference-page">
             <div className="logo-container">
@@ -12,7 +12,7 @@ const PreferencePage = () => {
                 <p className='choose'>Choose your style!</p>
                 
             </div>
-            <GenreList />
+            <GenreList genres={genres} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
         </div>
         
     )

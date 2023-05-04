@@ -1,6 +1,21 @@
+.search-components {
+    height: 12%;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-components .mini-logo {width: 3em;}
+.search-components .mini-logo img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
 .SearchBar{
-    width: 60%;
-    height: 5%;
+    width: 50%;
+    height: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;

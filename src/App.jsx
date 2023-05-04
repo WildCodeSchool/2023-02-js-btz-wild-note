@@ -13,7 +13,11 @@ import SearchPages from './pages/SearchPages'
 import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
 import SearchResults from './pages/SearchResults';
 import PageAlbum from './pages/PageAlbum';
-import SignUpPage from './pages/SignUp';;
+import SignUpPage from './pages/SignUp';
+import YourFavorites from './pages/YourFavorites';
+import FavoriteArtists from './pages/FavoriteArtists';
+import FavoriteAlbums from './pages/FavoriteAlbums';
+
 
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
@@ -46,6 +50,10 @@ function App() {
         <Route path='/search/:research' element={<SearchResults />} />
         <Route path='/album/:id' element={<PageAlbum/>}/>
         <Route path='/Player' element={<Player />} />
+        <Route path='/library/:playlistName' element={<Library />} />
+        <Route path='/library/your-favorites' element={<YourFavorites />} />
+        <Route path='/library/favorite-artists' element={<FavoriteArtists />} />
+        <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
       </Routes>
     </Router>
   );

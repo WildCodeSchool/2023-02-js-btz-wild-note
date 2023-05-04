@@ -7,10 +7,7 @@
     align-items: center;
 }
 
-.search-components .mini-logo {
-    height: 3em;
-    width: 3em;
-}
+.search-components .mini-logo {width: 3em;}
 .search-components .mini-logo img {
     margin: 0;
     height: 100%;

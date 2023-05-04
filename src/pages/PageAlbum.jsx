@@ -40,7 +40,13 @@ const PageAlbum = () => {
       <div className='album-cover'>
         <img src={album.images && album.images[0].url}/>
       </div>
-      <h4>- {album.name} -</h4>
+      <div className='album-title'>
+        <FavoriteButton />
+        <h4>- {album.name} -</h4>
+        <div className='play-btn-mini'>
+          <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
+        </div>
+      </div>
       <ul className='track-list'>
         {album.tracks && album.tracks.items.map((track)=> 
           <li key={track.id} className='track'>

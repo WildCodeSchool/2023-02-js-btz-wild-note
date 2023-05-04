@@ -7,7 +7,7 @@ import './FavoriteAlbums.css';
 
 const FavoriteAlbums = () => {
     const [displayOptions, setDisplayOptions] = useState(false);
-
+    let favs = JSON.parse(localStorage.getItem("album") || "[]");
     const toggleOptions = () => {
         setDisplayOptions(!displayOptions);
       };
@@ -28,26 +28,15 @@ const FavoriteAlbums = () => {
             </div>
             <div className='fav-albums-container'>
                 <ul className='albums-list'>
-                    <li className='album-container'>
-                        <span></span>
-                        <h3>Album Title</h3>
-                        <h4>Artist</h4>
-                    </li>
-                    <li className='album-container'>
-                        <span></span>
-                        <h3>Album Title</h3>
-                        <h4>Artist</h4>
-                    </li>
-                    <li className='album-container'>
-                        <span></span>
-                        <h3>Album Title</h3>
-                        <h4>Artist</h4>
-                    </li>
-                    <li className='album-container'>
-                        <span></span>
-                        <h3>Album Title</h3>
-                        <h4>Artist</h4>
-                    </li>
+                    {favs.maps((album) => 
+                        <li key={album.name} className='album-container'>
+                            <div className='album-cover'>
+                                <img src={album.images && album.images[0].url}/>
+                            </div>
+                            <h3>{album.name}</h3>
+                            <h4>{album.artists && album.artists[0].name}</h4>
+                        </li>
+                    )}    
                 </ul>
             </div>
             <Navbar />

@@ -9,6 +9,8 @@ import ReturnArrow from '../components/Player-components/ReturnArrow'
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton'
 
 const Player = () => {
+    
+    
     return (
         <div className='PlayerBottomBtnParent'>
             <div className='arrow-container'>
@@ -37,3 +39,5 @@ const Player = () => {
 }
 
 export default Player
+
+

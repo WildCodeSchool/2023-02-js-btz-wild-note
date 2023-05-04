@@ -5,8 +5,8 @@
     flex-flow: row wrap;
 }
 .CardGenre {
-    height: 8em;
-    width: 6em;
+    height: 6em;
+    width: 8em;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
@@ -27,16 +27,20 @@
 }
 
 .CardGenre-container span {
-    height: 50%;
+    height: 80%;
     width: 80%;
-    background-image: linear-gradient(to right top, #eba2df, #e9bcee, #ebd4f8, #f2eafe, #ffffff);
+    /*background-image: linear-gradient(to right top, #eba2df, #e9bcee, #ebd4f8, #f2eafe, #ffffff);*/
     border-radius: 8px;
-    margin-top: 10%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
 }
 
 .CardGenre-container h3{
     font-family: var(--main-font);
-    font-size: 0.7em;
-    margin-bottom: 10%;
+    font-size: 1em;
     text-transform: capitalize;
+    color: var(--bg-color);
 }

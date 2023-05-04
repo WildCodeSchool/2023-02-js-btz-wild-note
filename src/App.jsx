@@ -48,7 +48,8 @@ function App() {
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
-        <Route path='/album' element={<PageAlbum/>}/>
+        <Route path='/album/:id' element={<PageAlbum/>}/>
+        <Route path='/Player' element={<Player />} />
         <Route path='/library/:playlistName' element={<Library />} />
         <Route path='/library/your-favorites' element={<YourFavorites />} />
         <Route path='/library/favorite-artists' element={<FavoriteArtists />} />

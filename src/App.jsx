@@ -14,6 +14,7 @@ import PlayerBtnMini from './components/Player-components/PlayerBtnMini';
 import SearchResults from './pages/SearchResults';
 import PageAlbum from './pages/PageAlbum';
 import SignUpPage from './pages/SignUp';
+import YourFavorites from './pages/YourFavorites';
 import FavoriteArtists from './pages/FavoriteArtists';
 import FavoriteAlbums from './pages/FavoriteAlbums';
 
@@ -48,7 +49,8 @@ function App() {
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
         <Route path='/album' element={<PageAlbum/>}/>
-        <Route path='/library/playlists/:playlistName' element={<Library />} />
+        <Route path='/library/:playlistName' element={<Library />} />
+        <Route path='/library/your-favorites' element={<YourFavorites />} />
         <Route path='/library/favorite-artists' element={<FavoriteArtists />} />
         <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
       </Routes>

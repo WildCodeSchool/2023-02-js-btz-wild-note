@@ -4,9 +4,10 @@ import './Playlist.css'
 const Playlist = () => {
     const {playlistName} = useParams();
 
-
     return(
-        <>Test</>
+        <div className='playlist-page'>
+            <h1>{playlistName}</h1>
+        </div>
     )
 }
 

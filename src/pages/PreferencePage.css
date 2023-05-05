@@ -1,0 +1,25 @@
+.preference-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 15em;
+    margin: 1em 0 2em 0;
+}
+
+.preference-page p { font-weight: bold; color: var(--dark-font);}
+
+.preference-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.preference-page .title h2 {
+    display: none;
+}

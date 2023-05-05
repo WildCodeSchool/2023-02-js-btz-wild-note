@@ -1,0 +1,13 @@
+.history-container{
+    width : 100%;
+    height: 25%;
+}
+
+.history-container>h2{
+    padding-left: 5%;
+}
+
+.history-card{
+    width: 100%;
+    height: 80%;
+}

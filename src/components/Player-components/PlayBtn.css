@@ -1,0 +1,31 @@
+.play-btn-container, .pause-btn-container {
+    width: 3.2em;
+    height: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    box-shadow: var(--main-card-effect);
+}
+
+.play-btn-container svg {
+    padding: 0.5em;
+    border-radius: 50%;
+    box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
+}
+.pause-btn-container svg {
+    padding: 0.5em;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px #6173e5;
+}
+
+.play-btn-container>.play-btn,
+.pause-btn-container>.pause-btn {
+    height: 3em;
+    width: 3em;
+    
+}
+.play-btn-container>.play-btn {fill: var(--secondary-color)}
+.pause-btn-container>.pause-btn {fill: var(--bg-color);}

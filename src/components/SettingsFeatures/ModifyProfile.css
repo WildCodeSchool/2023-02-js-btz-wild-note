@@ -1,0 +1,42 @@
+.modify-form-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.modify-form input, .modify-form textarea, .modify-form button {
+    width: 100%;
+    margin: 1em auto;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.modify-form textarea { height: 7em;}
+.modify-form input, .modify-form button { height: 3em; }
+
+.modify-form input[type="text"], .modify-form input[type="password"], 
+.modify-form input[type="email"], .modify-form textarea {
+    padding: 0.8em;
+    box-shadow: var(--general-innerShadow);
+    font-family: var(--main-font)
+}
+
+.modify-form button {
+    height: 10%;
+    font-family: var(--title-font);
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--bg-color);
+    background: linear-gradient(90deg, #6173E6 0%, #CBD1F8 100%);
+    box-shadow: var(--main-card-effect);
+    cursor: pointer;
+}
+.modify-form label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--main-font)
+}

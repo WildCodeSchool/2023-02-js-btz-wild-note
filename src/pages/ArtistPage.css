@@ -1,0 +1,71 @@
+.ArtistPage{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-img{
+  margin: 1em;
+  width:11em;
+  height: 11em;
+  border-radius: 200px;
+  box-shadow:var(--main-card-effect);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-img img{
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  border-radius: 200px;
+}
+
+.artist-btn-container{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artist-favorite-btn{
+  width:2.5em;
+  height: 2.5em;
+}
+
+.top-tracks-container{
+  width: 100%;
+  height: 10%;
+  padding: 0.5em;
+  overflow: scroll;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.top-tracks-container::-webkit-scrollbar,   .artist-albums-container::-webkit-scrollbar{
+  display: none;
+}
+
+.artist-albums-container{
+  width: 90%;
+  height: 20%;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+}
+
+.btn-play-container>.play-btn-container, .btn-play-container>.pause-btn-container {
+  width: 2.2em;
+  height: 2.2em;
+}
+.btn-play-container>.play-btn-container>.play-btn,
+.btn-play-container>.pause-btn-container>.pause-btn 
+{
+  width: 2em;
+  height: 2em;
+}

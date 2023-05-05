@@ -1,0 +1,23 @@
+.Home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo-home{
+    width: 100%;
+    height: 8%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.logo-home img{
+    height: 100%;
+    margin: 0;
+}

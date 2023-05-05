@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+/*  VARIABLES */
+:root {
+    
+    --dark-font: #909090;
+    --light-font: #bebebe;
+    --main-color: #6173E6;
+    --secondary-color: #cbd1F8;
+    --bg-color: #ebecf0;
+    --main-card-effect: -5px 5px 10px rgba(212, 212, 216, 0.2), 5px -5px 10px rgba(212, 212, 216, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(212, 212, 216, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(212, 212, 216, 0.5);
+    --btn-player-shadow: inset -5px -5px 20px rgba(255, 255, 255, 0.3), inset 5px 5px 10px var(--main-color); /* bg of btn is --secondary-color */
+    --general-innerShadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --title-font: 'Poppins', sans-serif;
+    --main-font: 'Inter', sans-serif;
+    
+}
+
+
+/* INITIALIZATION*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    user-select: none;   
+}
+
+body{
+ width: 100vw;
+ height: 100vh;
+ background-color: var(--bg-color);
+ font-size: 16px;
+}
+
+.light-theme {
+  background-color: var(--bg-color);
+  height: 100%;
+  width: 100%;
+}
+
+.dark-theme {
+  background: #5e6366;
+  height: 100%;
+  width: 100%;
+}
+
+.discotheme  {
+  animation: disco 1s linear infinite;
+  width: 100%;
+  height: 100%;
+}  
+  
+@keyframes disco {
+0% {
+  background-color: rgb(255, 0, 166);
+  color: rgb(211, 241, 12);
+}
+25% {
+  background-color: rgb(108, 214, 108);
+  color: rgb(242, 242, 85);
+}
+50% {
+  background-color: rgb(90, 236, 241);
+  color: rgb(238, 156, 170);
+}
+75% {
+  background-color: rgb(140, 90, 241);
+  color: rgb(62, 237, 18);
+}
+100% {
+  background-color: rgb(124, 138, 138);
+  color: rgb(103, 2, 19);
+}
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    font-family: var(--title-font);
+    color: var(--light-font)
+}
+
+h3{
+    font-family: var(--main-font);
+    color: var(--dark-font);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h4{
+    font-family: var(--main-font);
+    color: var(--dark-font);
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+p{ font-family: var(--main-font);}
+
+a{
+    text-decoration: none;
+}

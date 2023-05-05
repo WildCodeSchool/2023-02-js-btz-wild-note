@@ -16,6 +16,7 @@ const Player = () => {
             <div className='arrow-container'>
                 <ReturnArrow />
             </div>
+            
             <div className='player-cover-contener'>
                 <PlayerCover />
             </div>

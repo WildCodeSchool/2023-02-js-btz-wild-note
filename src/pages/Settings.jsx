@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom';
 import logoavectexte from '../assets/logo-avectexte.png';
 import Navbar from '../components/navbar/Navbar';
-import ThemeSwitch from '../components/SettingsFeatures/ThemeSwitch';
+// import ThemeSwitchDisco from '../components/SettingsFeatures/ThemeSwitchDisco';
 import "./Settings.css";
+import ThemeSwitchDisco from '../components/SettingsFeatures/ThemeSwitchDisco';
+import ThemeSwitch from '../components/SettingsFeatures/ThemeSwitch';
 
-const Settings = () => {
+const Settings = ({...props}) => {
     return(
         <div className="settings-page">
            <div className="logo-container">
                 <img src={logoavectexte} alt="logo wildnote" />
             </div>
             <div className='settings-container'>
-                <ThemeSwitch />
+                <ThemeSwitch {...props} />
             </div>
             <div className='options-container'>
                 <Link to="/settings/profile"><h2>My profile</h2></Link>

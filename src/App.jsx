@@ -26,7 +26,6 @@ const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 function App() {
   const [genres, setGenres] = useState([])
   const [selectedGenres, setSelectedGenres] = useState([])
-
   const favoriteAlbums = localStorage.getItem("album");
   const favoriteArtists = localStorage.getItem("artist");
   const favoriteTracks = localStorage.getItem("track");

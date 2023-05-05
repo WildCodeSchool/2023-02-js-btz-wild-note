@@ -15,6 +15,10 @@ const Player = ({ handlePlay, handlePrev, handleNext, isPlaying }) => {
             <div className='arrow-container'>
                 <ReturnArrow />
             </div>
+            <div>
+                
+            </div>
+            
             <div className='player-cover-contener'>
                 <PlayerCover />
             </div>

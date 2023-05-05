@@ -41,7 +41,7 @@ useEffect(() => {
 return (
   <div className='PageAlbum'>
     <div className='page-album-header'>
-      <img className='logo-back-home' src={Logo}/>
+      <img className='logo-back-home' src={Logo} alt='logo'/>
       <IoIosArrowBack className='back-arrow' onClick={previousPage}/>
     </div>
     <h3>{album.artists && album.artists[0].name}</h3>

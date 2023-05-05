@@ -21,11 +21,14 @@ import ArtistPage from './pages/ArtistPage';
 import GenrePage from './pages/GenrePage';
 
 
+
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
 function App() {
   const [genres, setGenres] = useState([])
   const [selectedGenres, setSelectedGenres] = useState([])
+  const [isDark, setIsDark] = useState(true)
+  const [isDiscoModeActive, setIsDiscoModeActive] = useState(false);
   const [favoriteTrack, setFavoriteTrack] = useState([])
 
   useEffect(() => {
@@ -39,6 +42,10 @@ function App() {
   }, [])
 
   return (
+   
+      <div className={isDark ? 'light-theme': "dark-theme"}>
+        <div className={isDiscoModeActive ? 'discotheme' : 'light-theme'}>
+        
     <Router>
       <Routes>
         <Route path='/' element={<Home genres={genres} selectedGenres={selectedGenres} />} />
@@ -48,7 +55,7 @@ function App() {
         <Route path='/library' element={<Library />} />
         <Route path='/player' element={<Player />} />
         <Route path='/playermini' element={<PlayerBtnMini />} />
-        <Route path='/settings' element={<Settings />}/>
+        <Route path='/settings' element={<Settings setIsDark={setIsDark} isDark={isDark} setIsDiscoModeActive={setIsDiscoModeActive} isDiscoModeActive={isDiscoModeActive} />}/>
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
@@ -62,6 +69,9 @@ function App() {
         <Route path='/search/genre' element={<GenrePage />} />
       </Routes>
     </Router>
+    </div>
+    </div>
+  
   );
 }
 export default App;

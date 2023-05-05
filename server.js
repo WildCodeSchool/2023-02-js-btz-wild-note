@@ -27,7 +27,6 @@ app.post('/token', (req, res) => {
     },
     json: true
   };
-
   // Faire une requête HTTP POST pour obtenir un jeton d'accès
   axios.post(authOptions.url, null, {
     params: authOptions.form,
@@ -45,7 +44,6 @@ app.post('/token', (req, res) => {
     res.status(error.response.status).send(error.response.statusText);
   });
 });
-
 // Lancer le serveur sur le port 8080
 app.listen(8080, () => {
   console.log('Serveur lancé sur le port 8080');

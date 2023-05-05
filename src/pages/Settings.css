@@ -11,9 +11,13 @@
     margin: 1em 0 2em 0;
 }
 
-.settings-page .options-container, .settings-page .settings-container{
+.settings-page  .profile-options-container, .settings-page .settings-container{
     margin: 1em;
 }
 
 .settings-page a {text-decoration: none;}
+
+h2:hover{
+    color: var(--main-color);
+}
 

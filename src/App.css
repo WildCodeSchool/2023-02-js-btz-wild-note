@@ -17,6 +17,7 @@
     
 }
 
+
 /* INITIALIZATION*/
 
 *{
@@ -32,6 +33,47 @@ body{
  height: 100vh;
  background-color: var(--bg-color);
  font-size: 16px;
+}
+
+.light-theme {
+  background-color: var(--bg-color);
+  height: 100%;
+  width: 100%;
+}
+
+.dark-theme {
+  background: #5e6366;
+  height: 100%;
+  width: 100%;
+}
+
+.discotheme  {
+  animation: disco 1s linear infinite;
+  width: 100%;
+  height: 100%;
+}  
+  
+@keyframes disco {
+0% {
+  background-color: rgb(255, 0, 166);
+  color: rgb(211, 241, 12);
+}
+25% {
+  background-color: rgb(108, 214, 108);
+  color: rgb(242, 242, 85);
+}
+50% {
+  background-color: rgb(90, 236, 241);
+  color: rgb(238, 156, 170);
+}
+75% {
+  background-color: rgb(140, 90, 241);
+  color: rgb(62, 237, 18);
+}
+100% {
+  background-color: rgb(124, 138, 138);
+  color: rgb(103, 2, 19);
+}
 }
 
 #root{

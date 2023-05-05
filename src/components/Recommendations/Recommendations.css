@@ -3,10 +3,10 @@
     height: 30%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    margin-bottom: 2em;
 }
 
-.recommendations>h2{
+.recommendations .title h2{
     padding-left: 5%;
 }
 .recommendation-cards-container {

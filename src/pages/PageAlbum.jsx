@@ -9,7 +9,7 @@ import { BsPlayFill } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
 
 
-const PageAlbum = ({favoriteTrack, setFavoriteTrack}) => {
+const PageAlbum = () => {
 
 const [album, setAlbum] = useState({})
 const {id} = useParams();
@@ -52,10 +52,36 @@ return (
       <div className='album-favorite-btn'>
         <FavoriteButton />
       </div>
-      <h4>- {album.name} -</h4>
-      <div className='album-play-btn'>
-        <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
+
+      <div className='album-title'>
+        <div className='album-favorite-btn'>
+          <FavoriteButton type={"album"} id={album.id}/>
+        </div>
+        <h4>- {album.name} -</h4>
+        <div className='album-play-btn'>
+          <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
+        </div>
       </div>
+      <ul className='track-list'>
+        {album.tracks && album.tracks.items.map((track)=> 
+          <li key={track.id} className='track'>
+            <div className='favorite-btn-container'>
+              <FavoriteButton style={{width: '1.4em'}} type={"track"} id={track.id} />
+            </div>
+            <div className='track-infos-container'>
+              <p className='track-name'>{track.name}</p>
+              <p className='duration'>{duration(track.duration_ms)}</p>
+            </div>
+            <div className='btn-play-container'>
+              <div className='play-btn-track'>
+                <BsPlayFill style={{ height: '1.4em', width: '1.4em', fill: "#cbd1F8" }} />
+              </div>
+            </div>
+          </li>
+        )}
+      </ul>
+      <Navbar />
+
     </div>
     <ul className='track-list'>
       {album.tracks && album.tracks.items.map((track)=> 

@@ -27,6 +27,9 @@ const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 function App() {
   const [genres, setGenres] = useState([])
   const [selectedGenres, setSelectedGenres] = useState([])
+  const favoriteAlbums = localStorage.getItem("album");
+  const favoriteArtists = localStorage.getItem("artist");
+  const favoriteTracks = localStorage.getItem("track");
   const [isDark, setIsDark] = useState(true)
   const [isDiscoModeActive, setIsDiscoModeActive] = useState(false);
   const [favoriteTrack, setFavoriteTrack] = useState([])
@@ -59,11 +62,11 @@ function App() {
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
-        <Route path='/albums/:id' element={<PageAlbum favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack} />}/>
+        <Route path='/albums/:id' element={<PageAlbum favoriteAlbums={favoriteAlbums} favoriteTracks={favoriteTracks} />}/>
         <Route path='/artists/:id' element={<ArtistPage />} />
         <Route path='/Player' element={<Player />} />
         <Route path='/library/:playlistName' element={<Library />} />
-        <Route path='/library/your-favorites' element={<YourFavorites favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack}/>} />
+        <Route path='/library/your-favorites' element={<YourFavorites />} />
         <Route path='/library/favorite-artists' element={<FavoriteArtists />} />
         <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
         <Route path='/search/genre' element={<GenrePage />} />

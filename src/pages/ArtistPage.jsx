@@ -5,7 +5,9 @@ import './ArtistPage.css';
 import Logo from '../assets/logo-sanstexte.png';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
 import { BsPlayFill } from 'react-icons/bs';
+
 import { IoIosArrowBack } from 'react-icons/io';
+
 import Navbar from '../components/navbar/Navbar';
 
 
@@ -17,9 +19,11 @@ const ArtistPage = () => {
     const {id} = useParams();
     const navigate = useNavigate()
 
+
     const previousPage = () => {
         navigate(-1);
       }
+
 
 
     useEffect(() => {
@@ -62,6 +66,9 @@ const ArtistPage = () => {
         return `${min}:${sec}`
       }
 
+    const previousPage = () => {
+        navigate(-1);
+    }
   return (
     <div className='ArtistPage'>
         <div className='page-album-header'>
@@ -74,7 +81,7 @@ const ArtistPage = () => {
         </div>
         <div className='artist-btn-container'>
             <div className='artist-favorite-btn'>
-                <FavoriteButton />
+                <FavoriteButton type={"artist"} id={artist.id}/>
             </div>
             <div className='artist-play-btn'>
                 <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
@@ -84,7 +91,7 @@ const ArtistPage = () => {
             {tracks.map(track => 
                 <li key={track.id} className='track'>
                     <div className='favorite-btn-container'>
-                    <FavoriteButton style={{width: '1.4em'}}/>
+                    <FavoriteButton style={{width: '1.4em'}} type={"track"} id={track.id} />
                     </div>
                     <div className='track-infos-container'>
                     <p className='track-name'>{track.name}</p>

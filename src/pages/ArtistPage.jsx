@@ -5,7 +5,9 @@ import './ArtistPage.css';
 import Logo from '../assets/logo-sanstexte.png';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
 import { BsPlayFill } from 'react-icons/bs';
-import {IoIosArrowBack} from 'react-icons/io';
+
+import { IoIosArrowBack } from 'react-icons/io';
+
 import Navbar from '../components/navbar/Navbar';
 
 
@@ -16,6 +18,13 @@ const ArtistPage = () => {
     const [albums, setAlbums] = useState([]);
     const {id} = useParams();
     const navigate = useNavigate()
+
+
+    const previousPage = () => {
+        navigate(-1);
+      }
+
+
 
     useEffect(() => {
         axios

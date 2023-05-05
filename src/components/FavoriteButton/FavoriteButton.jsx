@@ -1,4 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
+
 import './FavoriteButton.css';
 import { BsFillHeartFill } from 'react-icons/bs'
 
@@ -24,6 +26,7 @@ const FavoriteButton = ({type, id}) => {
     localStorage.setItem(type, JSON.stringify(favs)) 
     setFavorite(!favorite);
   }
+
 
   return (
     <BsFillHeartFill color={favorite ? "var(--secondary-color)" : "var(--dark-font)"} onClick={addFavorite} style={{width: '100%', height: '100%'}}/>

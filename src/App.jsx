@@ -18,6 +18,7 @@ import YourFavorites from './pages/YourFavorites';
 import FavoriteArtists from './pages/FavoriteArtists';
 import FavoriteAlbums from './pages/FavoriteAlbums';
 import ArtistPage from './pages/ArtistPage';
+import GenrePage from './pages/GenrePage';
 
 
 
@@ -45,8 +46,8 @@ function App() {
 
   return (
    
-      <div className={isDark ?null: "dark-theme"}>
-        <div className={isDiscoModeActive ? 'discotheme' : null}>
+      <div className={isDark ? 'light-theme': "dark-theme"}>
+        <div className={isDiscoModeActive ? 'discotheme' : 'light-theme'}>
         
     <Router>
       <Routes>
@@ -68,6 +69,7 @@ function App() {
         <Route path='/library/your-favorites' element={<YourFavorites />} />
         <Route path='/library/favorite-artists' element={<FavoriteArtists />} />
         <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
+        <Route path='/search/genre' element={<GenrePage />} />
       </Routes>
     </Router>
     </div>

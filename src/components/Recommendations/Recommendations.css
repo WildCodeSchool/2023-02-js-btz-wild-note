@@ -23,15 +23,3 @@
 .recommendation-cards-container::-webkit-scrollbar {
     display: none;
 }
-
-.recommendations .Card-container {
-    width: 6em;
-    height: 7.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    text-align: center;
-    box-shadow: var(--main-card-effect);
-    border-radius: 8px;
-}

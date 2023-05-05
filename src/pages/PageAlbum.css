@@ -44,22 +44,29 @@
     height: 2.5em;
   }
 
-  .album-play-btn{
-    width: 3.2em;
-    height: 3.2em;
-    background-color: var(--bg-color);
-    border-radius: 50%;
-    box-shadow: var(--main-card-effect);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.5em;
-  }
-  .album-play-btn svg {
-    padding: 0.5em;
-    border-radius: 50%;
-    box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
-  }
+.album-title>.play-btn-container, .track>.pause-btn-container {
+  width: 3.2em;
+  height: 3.2em;
+}
+.album-title>.play-btn-container svg {
+  padding: 0.5em;
+  border-radius: 50%;
+  box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
+}
+.album-title>.pause-btn-container svg {
+  padding: 0.5em;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: inset 0px 4px 4px #6173e5;
+}
+.album-title>.play-btn-container>.play-btn,
+.album-title>.pause-btn-container>.pause-btn 
+{
+  width: 3em;
+  height: 3em;
+}
+.album-title>.play-btn-container>.play-btn {fill: var(--secondary-color)}
+.album-title>.pause-btn-container>.pause-btn {fill: var(--bg-color);}
 
 .album-cover img{
   width: 90%;
@@ -70,12 +77,13 @@
 
 .track-list{
   margin-top: 2em;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   overflow: scroll;
   height: 38%;
-  width: 90%;
+  width: 100%;
 }
 .track-list::-webkit-scrollbar{display: none;}
 
@@ -105,27 +113,28 @@
     color: var(--light-font);
   }
   
-  .play-btn-track{
-    width: 1.5em;
-    height: 1.5em;
-    background-color: var(--bg-color);
-    border-radius: 50%;
-    box-shadow: var(--main-card-effect);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.5em;
-  }
-
-  .play-btn-track svg{
-    padding: 0.2em;
-    border-radius: 50%;
-    box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
-  }
 
 
-.track-list .play-btn-mini{
-  width: 1.5em;
-  height: 1.5em;
+.track>.play-btn-container, .track>.pause-btn-container {
+  width: 2.2em;
+  height: 2.2em;
 }
-
+.track>.play-btn-container svg {
+  padding: 0.5em;
+  border-radius: 50%;
+  box-shadow: inset 20px 20px 50px rgba(255, 255, 255, 0.8);
+}
+.track>.pause-btn-container svg {
+  padding: 0.5em;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: inset 0px 4px 4px #6173e5;
+}
+.track>.play-btn-container>.play-btn,
+.track>.pause-btn-container>.pause-btn 
+{
+  width: 2em;
+  height: 2em;
+}
+.track>.play-btn-container>.play-btn {fill: var(--secondary-color)}
+.track>.pause-btn-container>.pause-btn {fill: var(--bg-color);}

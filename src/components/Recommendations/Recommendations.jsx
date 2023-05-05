@@ -10,13 +10,13 @@ const Recommendations = ({selecteGenres}) => {
       </div>
         
         <div className='recommendation-cards-container'>
-          {selecteGenres.map((genre) => /* {
-            
-              <span></span> */<div key={genre} className='Card-container'>
-                <span></span>
-              <h3 className='genre'>{genre}</h3></div> 
-            /* 
-          } */)}
+          {selecteGenres.map((genre) => 
+          <div key={genre} className='GenreCard'>
+            <div className="Card-container">
+            <span style={{backgroundColor: `hsl(${Math.random()*360}deg, 85%, 85% )`}}><h3 className='genre'>{genre}</h3></span>
+            </div>
+          </div>
+            )}
         </div>
           
         

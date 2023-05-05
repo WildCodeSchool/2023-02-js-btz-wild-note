@@ -4,7 +4,7 @@ import PlayerNextPlayPrevBtn from '../components/Player-components/PlayerNextPla
 import PlayerShuffle from '../components/Player-components/PlayerShuffle'
 import './Player.css'
 import PlayerTitle from '../components/Player-components/PlayerTitle'
-import PlayerBtnLike from '../components/Player-components/PlayerBtnLike'
+
 import ReturnArrow from '../components/Player-components/ReturnArrow'
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton'
 
@@ -16,6 +16,10 @@ const Player = ({ handlePlay, handlePrev, handleNext, isPlaying }) => {
             <div className='arrow-container'>
                 <ReturnArrow />
             </div>
+            <div>
+                
+            </div>
+            
             <div className='player-cover-contener'>
                 <PlayerCover />
             </div>

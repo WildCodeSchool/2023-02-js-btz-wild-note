@@ -2,7 +2,7 @@
 
 import "./ThemeSwitch.css";
 import ThemeSwitchDisco from './ThemeSwitchDisco';
-// import Switch from "react-switch";
+
 
 const ThemeSwitch = ({isDark,setIsDark, ...props}) => {
     
@@ -14,7 +14,7 @@ const ThemeSwitch = ({isDark,setIsDark, ...props}) => {
     return(
         <div className="btn-mode-container disco-button">
             <ThemeSwitchDisco {...props}/>
-        <div className={isDark ? null : "dark-theme"} onClick={toggleTheme}>
+        <div className={isDark ? "light-theme" : "dark-theme"} onClick={toggleTheme}>
             <div>{isDark ? "Light Mode" : "Dark Mode"}</div>
         </div>
         </div>

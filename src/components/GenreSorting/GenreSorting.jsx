@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './GenreSorting.css';
 import CardGenre from '../Card/CardGenre';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 const GenreSorting = () => {
@@ -26,7 +27,7 @@ const GenreSorting = () => {
     <div className='genre-container'>
         <h2>GENRE</h2>
         <div className='cardgenre'>
-        {genres.map((genre)=> <CardGenre key={genre} genre={genre}/>)}
+        {genres.map((genre)=> <Link key={`${genre}-link`} to={'/search/genre'}><CardGenre key={genre} genre={genre}/></Link>)}
         </div>
     </div>
   )

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './ArtistPage.css';
 import Logo from '../assets/logo-sanstexte.png';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
 import { BsPlayFill } from 'react-icons/bs';
+import { IoIosArrowBack } from 'react-icons/io';
 import Navbar from '../components/navbar/Navbar';
 
 
@@ -14,6 +15,11 @@ const ArtistPage = () => {
     const [tracks, setTracks] = useState([]);
     const [albums, setAlbums] = useState([]);
     const {id} = useParams();
+    const navigate = useNavigate()
+
+    const previousPage = () => {
+        navigate(-1);
+      }
 
 
     useEffect(() => {
@@ -58,7 +64,10 @@ const ArtistPage = () => {
 
   return (
     <div className='ArtistPage'>
-        <img className='logo-back-home' src={Logo}/>
+        <div className='page-album-header'>
+            <img className='logo-back-home' src={Logo}/>
+            <IoIosArrowBack className='back-arrow' onClick={previousPage}/>
+        </div>
         <h3>{artist.name}</h3>
         <div className='artist-img'>
             <img src={artist.images && artist.images[0].url} />

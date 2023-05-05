@@ -18,6 +18,7 @@ import YourFavorites from './pages/YourFavorites';
 import FavoriteArtists from './pages/FavoriteArtists';
 import FavoriteAlbums from './pages/FavoriteAlbums';
 import ArtistPage from './pages/ArtistPage';
+import GenrePage from './pages/GenrePage';
 
 
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
@@ -58,6 +59,7 @@ function App() {
         <Route path='/library/your-favorites' element={<YourFavorites favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack}/>} />
         <Route path='/library/favorite-artists' element={<FavoriteArtists />} />
         <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
+        <Route path='/search/genre' element={<GenrePage />} />
       </Routes>
     </Router>
   );

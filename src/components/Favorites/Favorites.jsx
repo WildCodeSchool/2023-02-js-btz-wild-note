@@ -5,8 +5,6 @@ import './Favorites.css'
 
 const Favorites = () => {
 
-  const favorites =  JSON.parse(localStorage.getItem('favorite'));
-
   return (
     <div className='favorites-container'>
         <h2>MY FAVORITES</h2>

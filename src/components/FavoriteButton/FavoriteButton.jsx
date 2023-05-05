@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import './FavoriteButton.css';
 import { BsFillHeartFill } from 'react-icons/bs'
 
@@ -8,8 +8,11 @@ const FavoriteButton = ({track, favoriteTrack, setFavoriteTrack}) => {
 
   const addFavorite = () => {
     setFavorite(!favorite);
-    setFavoriteTrack([...favoriteTrack, track])
   }
+
+  // const favoritesTracks = useMemo(() => {
+
+  // }, [favoriteTrack])
 
   // const favorites = localStorage.setItems('favorite', JSON.stringify(favorite));
 

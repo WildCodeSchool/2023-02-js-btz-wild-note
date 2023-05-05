@@ -11,7 +11,6 @@ import  { ThemeContext } from '../components/SettingsFeatures/ThemeProvider';
 const Home = ({genres, selectedGenres}) => {
 
   return (
-    <>
     <div className='Home'>
         <div  className='logo-home'>
           <img src={Logo} alt='logo'/>
@@ -20,7 +19,6 @@ const Home = ({genres, selectedGenres}) => {
         <YourArtists />
         <Navbar />
     </div>
-    </>
   )
 }
 

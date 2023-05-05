@@ -8,10 +8,7 @@ import PlayerTitle from '../components/Player-components/PlayerTitle'
 import ReturnArrow from '../components/Player-components/ReturnArrow'
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton'
 
-
-const Player = () => {
-
-
+const Player = ({ handlePlay, handlePrev, handleNext, isPlaying }) => {
     
     
     return (
@@ -38,7 +35,7 @@ const Player = () => {
             <div className='PlayerBottomBtn'>
 
                 <PlayerReplayBtn />
-                <PlayerNextPlayPrevBtn />
+                <PlayerNextPlayPrevBtn handlePlay={handlePlay} handlePrev={handlePrev} handleNext={handleNext} isPlaying={isPlaying}/>
                 <PlayerShuffle />
             </div>
         </div>

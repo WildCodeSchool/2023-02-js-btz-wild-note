@@ -6,6 +6,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 import Navbar from '../components/navbar/Navbar'
 import axios from 'axios';
 
+
 const SearchResults = () => {
 
 

@@ -7,11 +7,18 @@ import './FavoriteArtists.css';
 
 const FavoriteArtists = () => {
     const [displayOptions, setDisplayOptions] = useState(false);
-
     const toggleOptions = () => {
         setDisplayOptions(!displayOptions);
       };
 
+    const [favs, setFavs] = useState(() => {
+        const saveFavTrack = localStorage.getItem('artist');
+        console.log(saveFavTrack);
+        const parseFavTrack = JSON.parse(saveFavTrack);
+
+        return (parseFavTrack || []).map(keyId => JSON.parse(localStorage.getItem(keyId)));
+    });
+    console.log(favs);
     return(
         <div className='fav-artists-page'>
             <div className='playlist-icons-option'>
@@ -28,22 +35,16 @@ const FavoriteArtists = () => {
             </div>
             <div className='fav-artists-container'>
                 <ul className='artists-list'>
-                    <li className='artist-container'>
-                        <span></span>
-                        <h3>Artist</h3>
-                    </li>
-                    <li className='artist-container'>
-                        <span></span>
-                        <h3>Artist</h3>
-                    </li>
-                    <li className='artist-container'>
-                        <span></span>
-                        <h3>Artist</h3>
-                    </li>
-                    <li className='artist-container'>
-                        <span></span>
-                        <h3>Artist</h3>
-                    </li>
+                    {favs.map((artist) => 
+                        <li key={artist.name} className='fav-artist-container'>
+                            <div className='fav-artist-cover'>
+                                <img src={artist.images && artist.images[0].url}/>
+                            </div>
+                            <div className='fav-artist-info'>
+                                <h3>{artist.name}</h3>
+                            </div>
+                        </li>
+                    )} 
                 </ul>
             </div>
             <Navbar />

@@ -18,7 +18,6 @@ import YourFavorites from './pages/YourFavorites';
 import FavoriteArtists from './pages/FavoriteArtists';
 import FavoriteAlbums from './pages/FavoriteAlbums';
 import ArtistPage from './pages/ArtistPage';
-import GenrePage from './pages/GenrePage';
 
 
 
@@ -39,7 +38,8 @@ function App() {
   const [isPlaying, setIsPlaying] = useState("");
 
   useEffect(() => {
-      fetch(`https://api.spotify.com/v1/albums/${id}/tracks`, {
+    axios
+      .get(`https://api.spotify.com/v1/albums/${id}/tracks`, {
           headers: {
               Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
           },
@@ -138,7 +138,6 @@ function App() {
         <Route path='/library/your-favorites' element={<YourFavorites handlePlay={handlePlay} handlePrev={handlePrev} handleNext={handleNext} isPlaying={isPlaying} favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack}/>} />
         <Route path='/library/favorite-artists' element={<FavoriteArtists handlePlay={handlePlay} handlePrev={handlePrev} handleNext={handleNext} isPlaying={isPlaying} />} />
         <Route path='/library/favorite-albums' element={<FavoriteAlbums handlePlay={handlePlay} handlePrev={handlePrev} handleNext={handleNext} isPlaying={isPlaying} />} />
-        <Route path='/search/genre' element={<GenrePage />} />
       </Routes>
     </Router>
     </div>

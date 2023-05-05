@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import './SignUp.css'
-import { UserContext } from './UsernameContext'
 
 const SignUp = () => {
 

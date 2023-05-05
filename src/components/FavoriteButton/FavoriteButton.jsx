@@ -5,14 +5,15 @@ import './FavoriteButton.css';
 import { BsFillHeartFill } from 'react-icons/bs'
 
 /* albums, tracks, artists */
-const FavoriteButton = ({type, id}) => {
+const FavoriteButton = ({type, id, name, ...rest}) => {
 
-  let favs = []
+  const [favs, setFavs] = useState([]);
 
   const [favorite, setFavorite] = useState(false);
 
   useEffect(() => {
-    favs = JSON.parse(localStorage.getItem(type) || "[]");
+    const favsFromLocalStorage = JSON.parse(localStorage.getItem(type) || "[]");
+    setFavs(favsFromLocalStorage)
     setFavorite(favs.includes(id))
 
   }, [id])
@@ -20,6 +21,7 @@ const FavoriteButton = ({type, id}) => {
   const addFavorite = () => {
     if (!favorite ) {
       favs.push(id)
+      localStorage.setItem(id, JSON.stringify({name, ...rest}))
     } else {
       favs = favs.filter(item => item !== id)
     }

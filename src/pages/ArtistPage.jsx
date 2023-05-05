@@ -76,7 +76,7 @@ const ArtistPage = ({handlePlay, handlePrev, handleNext, isPlaying}) => {
         </div>
         <div className='artist-btn-container'>
             <div className='artist-favorite-btn'>
-                <FavoriteButton type={"artist"} id={artist.id}/>
+                <FavoriteButton type={"artist"} {...artist} />
             </div>
             <PlayBtn id={artist.id} handlePlay={handlePlay} isPlaying={isPlaying}/>
         </div>
@@ -84,7 +84,7 @@ const ArtistPage = ({handlePlay, handlePrev, handleNext, isPlaying}) => {
             {tracks.map(track => 
                 <li key={track.id} className='track'>
                     <div className='favorite-btn-container'>
-                    <FavoriteButton style={{width: '1.4em'}} type={"track"} id={track.id} />
+                    <FavoriteButton style={{width: '1.4em'}} type={"track"} {...track} />
                     </div>
                     <div className='track-infos-container'>
                     <p className='track-name'>{track.name}</p>

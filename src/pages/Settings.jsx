@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import logoavectexte from '../assets/logo-avectexte.png';
 import Navbar from '../components/navbar/Navbar';
-// import ThemeSwitchDisco from '../components/SettingsFeatures/ThemeSwitchDisco';
 import "./Settings.css";
-import ThemeSwitchDisco from '../components/SettingsFeatures/ThemeSwitchDisco';
 import ThemeSwitch from '../components/SettingsFeatures/ThemeSwitch';
 
 const Settings = ({...props}) => {

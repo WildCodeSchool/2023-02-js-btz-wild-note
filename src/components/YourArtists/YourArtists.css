@@ -6,3 +6,20 @@
 .artists-container>h2{
     padding-left: 5%;
 }
+.artists-container>.fav-artists-container {
+    overflow-X: scroll;
+}
+.artists-container>.fav-artists-container .fav-artist-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.artists-container>.fav-artists-container>.artists-list {
+    display: flex;
+    gap: 0.5em;
+}
+
+.artists-container>.fav-artists-container .fav-artist-info>h3 {
+    font-size: 1em;
+    text-align: center;
+}

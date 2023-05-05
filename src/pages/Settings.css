@@ -17,3 +17,7 @@
 
 .settings-page a {text-decoration: none;}
 
+h2:hover{
+    color: var(--main-color);
+}
+

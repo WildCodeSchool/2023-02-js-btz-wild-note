@@ -1,19 +1,23 @@
-import { useState } from 'react'
-import logoavectexte from '../../assets/logo-avectexte.png';
-import "./ThemeSwitch.css";
 
-const ThemeSwitch = () => {
-    const [isLight, setIsLight] = useState(true)
+
+import "./ThemeSwitch.css";
+import ThemeSwitchDisco from './ThemeSwitchDisco';
+// import Switch from "react-switch";
+
+const ThemeSwitch = ({isDark,setIsDark, ...props}) => {
+    
 
     const toggleTheme = () => {
-        setIsLight(!isLight)
+        setIsDark(!isDark)
     }
 
     return(
-        <div className={isLight ? "light-theme" : "dark-theme"}>
-            <button className={isLight ? "light-btn" : "dark-btn"} onClick={toggleTheme}>{isLight ? "Light Mode" : "Dark Mode"}</button>
+        <div className="btn-mode-container disco-button">
+            <ThemeSwitchDisco {...props}/>
+        <div className={isDark ? null : "dark-theme"} onClick={toggleTheme}>
+            <div>{isDark ? "Light Mode" : "Dark Mode"}</div>
         </div>
-        
+        </div>
     )
 }
 

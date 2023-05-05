@@ -41,12 +41,12 @@ const PageAlbum = () => {
   return (
     <div className='PageAlbum'>
       <div className='page-album-header'>
-        <img className='logo-back-home' src={Logo}/>
+        <img className='logo-back-home' src={Logo} alt="logo"/>
         <IoIosArrowBack className='back-arrow' onClick={previousPage}/>
       </div>
       <h3>{album.artists && album.artists[0].name}</h3>
       <div className='album-cover'>
-        <img src={album.images && album.images[0].url}/>
+        <img src={album.images && album.images[0].url} alt ='coucou2'/>
       </div>
       <div className='album-title'>
         <div className='album-favorite-btn'>

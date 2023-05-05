@@ -20,15 +20,22 @@ import FavoriteAlbums from './pages/FavoriteAlbums';
 import ArtistPage from './pages/ArtistPage';
 
 
+
 const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
 function App() {
   const [genres, setGenres] = useState([])
   const [selectedGenres, setSelectedGenres] = useState([])
+<<<<<<< HEAD
 
   const favoriteAlbums = localStorage.getItem("album");
   const favoriteArtists = localStorage.getItem("artist");
   const favoriteTracks = localStorage.getItem("track");
+=======
+  const [isDark, setIsDark] = useState(true)
+  const [isDiscoModeActive, setIsDiscoModeActive] = useState(false);
+  const [favoriteTrack, setFavoriteTrack] = useState([])
+>>>>>>> dev
 
   useEffect(() => {
     axios.get("https://api.spotify.com/v1/recommendations/available-genre-seeds", {
@@ -41,6 +48,10 @@ function App() {
   }, [])
 
   return (
+   
+      <div className={isDark ?null: "dark-theme"}>
+        <div className={isDiscoModeActive ? 'discotheme' : null}>
+        
     <Router>
       <Routes>
         <Route path='/' element={<Home genres={genres} selectedGenres={selectedGenres} />} />
@@ -50,7 +61,7 @@ function App() {
         <Route path='/library' element={<Library />} />
         <Route path='/player' element={<Player />} />
         <Route path='/playermini' element={<PlayerBtnMini />} />
-        <Route path='/settings' element={<Settings />}/>
+        <Route path='/settings' element={<Settings setIsDark={setIsDark} isDark={isDark} setIsDiscoModeActive={setIsDiscoModeActive} isDiscoModeActive={isDiscoModeActive} />}/>
         <Route path='/settings/profile' element={<Profile />}/>
         <Route path='/search' element={<SearchPages />} />
         <Route path='/search/:research' element={<SearchResults />} />
@@ -63,6 +74,9 @@ function App() {
         <Route path='/library/favorite-albums' element={<FavoriteAlbums />} />
       </Routes>
     </Router>
+    </div>
+    </div>
+  
   );
 }
 export default App;

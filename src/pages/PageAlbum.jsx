@@ -9,7 +9,7 @@ import { BsPlayFill } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
 
 
-const PageAlbum = ({favoriteTrack, setFavoriteTrack}) => {
+const PageAlbum = () => {
 
   const [album, setAlbum] = useState({})
   const {id} = useParams();
@@ -50,7 +50,7 @@ const PageAlbum = ({favoriteTrack, setFavoriteTrack}) => {
       </div>
       <div className='album-title'>
         <div className='album-favorite-btn'>
-          <FavoriteButton />
+          <FavoriteButton type={"album"} id={album.id}/>
         </div>
         <h4>- {album.name} -</h4>
         <div className='album-play-btn'>
@@ -61,7 +61,7 @@ const PageAlbum = ({favoriteTrack, setFavoriteTrack}) => {
         {album.tracks && album.tracks.items.map((track)=> 
           <li key={track.id} className='track'>
             <div className='favorite-btn-container'>
-              <FavoriteButton style={{width: '1.4em'}} favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack} track={track}/>
+              <FavoriteButton style={{width: '1.4em'}} type={"track"} id={track.id} />
             </div>
             <div className='track-infos-container'>
               <p className='track-name'>{track.name}</p>

@@ -1,16 +1,25 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {IoIosArrowBack, IoIosShuffle, IoIosMore, IoMdShare} from 'react-icons/io'
+import {IoIosArrowBack, IoIosMore, IoMdShare} from 'react-icons/io'
 import { BsFillPencilFill } from 'react-icons/bs'
 import Navbar from '../components/navbar/Navbar';
 import './FavoriteAlbums.css';
 
 const FavoriteAlbums = () => {
     const [displayOptions, setDisplayOptions] = useState(false);
-    let favs = JSON.parse(localStorage.getItem("album") || "[]");
     const toggleOptions = () => {
         setDisplayOptions(!displayOptions);
       };
+
+    const [favs, setFavs] = useState(() => {
+        const saveFavTrack = localStorage.getItem('album');
+        console.log(saveFavTrack);
+        const parseFavTrack = JSON.parse(saveFavTrack);
+
+        return (parseFavTrack || []).map(keyId => JSON.parse(localStorage.getItem(keyId)));
+    });
+    console.log(favs);
+
 
     return(
         <div className='fav-albums-page'>
@@ -28,13 +37,15 @@ const FavoriteAlbums = () => {
             </div>
             <div className='fav-albums-container'>
                 <ul className='albums-list'>
-                    {favs.maps((album) => 
-                        <li key={album.name} className='album-container'>
-                            <div className='album-cover'>
+                    {favs.map((album) => 
+                        <li key={album.name} className='fav-album-container'>
+                            <div className='fav-album-cover'>
                                 <img src={album.images && album.images[0].url}/>
                             </div>
-                            <h3>{album.name}</h3>
-                            <h4>{album.artists && album.artists[0].name}</h4>
+                            <div className='fav-album-info'>
+                                <h3>{album.name}</h3>
+                                <h4>{album.artists && album.artists[0].name}</h4> 
+                            </div>
                         </li>
                     )}    
                 </ul>

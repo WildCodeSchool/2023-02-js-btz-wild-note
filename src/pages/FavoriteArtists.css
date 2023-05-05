@@ -17,15 +17,13 @@
     justify-content: center;
     text-align: center;
     border-radius: 14px;
-    background-color: var(--bg-color);
-    box-shadow: var(--main-card-effect);
     font-family: var(--title-font);
     color: var(--dark-font);
 }
 
 .fav-artists-container {width: 100%;}
 
-.artists-list .artist-container {
+.artists-list .fav-artist-container {
     width: 100%;
     margin: 1.5em 0;
     display: flex;
@@ -35,11 +33,19 @@
 
 }
 
-.artists-list .artist-container span {
-    height: 3em;
-    width: 3em;
-    background-color: var(--secondary-color);
+.artists-list .fav-artist-container .fav-artist-cover {
+    height: 4em;
+    width: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: var(--main-card-effect);
+    border-radius: 50%;
+}
+.artists-list .fav-artist-container .fav-artist-cover>img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
 }
 

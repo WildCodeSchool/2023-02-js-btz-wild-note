@@ -3,9 +3,8 @@ import axios from 'axios'
 import './PageAlbum.css'
 import Logo from '../assets/logo-sanstexte.png';
 import Navbar from '../components/navbar/Navbar';
-import { useParams, Link, useNavigate} from 'react-router-dom';
+import { useParams, useNavigate} from 'react-router-dom';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
-import { BsPlayFill } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
 import PlayBtn from '../components/Player-components/PlayBtn';
 
@@ -50,18 +49,18 @@ return (
     </div>
     <div className='album-title'>
       <div className='album-favorite-btn'>
-        <FavoriteButton />
+        <FavoriteButton type={"album"} {...album} />
       </div>
       <h4>- {album.name} -</h4>
       <div className='album-play-btn'>
-        <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
+        <PlayBtn id={album.id} handlePlay={handlePlay} isPlaying={isPlaying}/>
       </div>
     </div>
     <ul className='track-list'>
       {album.tracks && album.tracks.items.map((track)=> 
         <li key={track.id} className='track'>
           <div className='favorite-btn-container'>
-            <FavoriteButton style={{width: '1.4em'}} favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack} track={track}/>
+            <FavoriteButton style={{width: '1.4em'}} favoriteTrack={favoriteTrack} setFavoriteTrack={setFavoriteTrack} type={'track'} {...track}/>
           </div>
           <div className='track-infos-container'>
             <p className='track-name'>{track.name}</p>

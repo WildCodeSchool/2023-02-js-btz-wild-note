@@ -1,18 +1,32 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import {IoIosArrowBack, IoIosShuffle, IoIosMore, IoMdShare} from 'react-icons/io'
+import { useState, useEffect } from 'react';
+import {IoIosArrowBack, IoIosMore, IoMdShare} from 'react-icons/io'
 import { BsFillPencilFill } from 'react-icons/bs'
 import Navbar from '../components/navbar/Navbar';
 import PlayBtn from '../components/Player-components/PlayBtn';
 import PlayerShuffle from '../components/Player-components/PlayerShuffle';
 import './YourFavorites.css';
 
-const YourFavorites = ({favoriteTrack, setFavoriteTrack, handlePlay, handlePrev, handleNext, isPlaying}) => {
+const YourFavorites = ({handlePlay, handlePrev, handleNext, isPlaying, type, id, name, ...rest}) => {
     const [displayOptions, setDisplayOptions] = useState(false);
 
     const toggleOptions = () => {
         setDisplayOptions(!displayOptions);
       };
+
+    
+    const [favs, setFavs] = useState(() => {
+        const saveFavTrack = localStorage.getItem('track');
+        console.log(saveFavTrack);
+        const parseFavTrack = JSON.parse(saveFavTrack);
+
+        
+        
+        return (parseFavTrack || []).map(keyId => JSON.parse(localStorage.getItem(keyId)));
+    });
+    console.log(favs);
+
+    
 
     return(
         <div className='your-favorites-page'>
@@ -33,13 +47,17 @@ const YourFavorites = ({favoriteTrack, setFavoriteTrack, handlePlay, handlePrev,
                 <PlayBtn id={0} handlePlay={handlePlay} isPlaying={isPlaying}/>
             </div>
             <div className='favorite-tracks-container'>
-                {favoriteTrack.map((track) => /* {
+                {favs.map((track) =>   
+                <div key={`fav-${track.id}`} className='track-container'>
+                    <div className='track-info-container'>
+                        <h3 className='track-name'>{track.name}</h3>
+                        <p>{track.artists[0].name}</p>
+                    </div>
+                        <PlayBtn id={track.id} handlePlay={handlePlay} isPlaying={isPlaying}/> 
+                </div>
+
                     
-                    <span></span> */<div key={track} className='track-container'>
-                        <span></span>
-                    <h3 className='track-name'>{track}</h3></div> 
-                    /* 
-                } */)}
+)}
             </div>
 
             <Navbar /> 

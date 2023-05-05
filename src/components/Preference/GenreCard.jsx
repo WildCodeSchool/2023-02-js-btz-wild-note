@@ -14,8 +14,7 @@ const GenreCard = ({genre, selectedGenres, setSelectedGenres}) => {
     return (
         <div className='GenreCard'>
             <div className={!selected ? "Card-container" : "Card-container selected"} onClick={handleSelect}>
-              <span></span>
-            <h3 className='genre'>{genre}</h3>  
+            <span style={{backgroundColor: `hsl(${Math.random()*360}deg, 85%, 85% )`}}><h3 className='genre'>{genre}</h3></span>
             </div>
         </div>
     )

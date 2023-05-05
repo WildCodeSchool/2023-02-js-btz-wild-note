@@ -1,9 +1,3 @@
-.cards-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-}
 .CardGenre {
     height: 6em;
     width: 8em;
@@ -29,7 +23,6 @@
 .CardGenre-container span {
     height: 80%;
     width: 80%;
-    /*background-image: linear-gradient(to right top, #eba2df, #e9bcee, #ebd4f8, #f2eafe, #ffffff);*/
     border-radius: 8px;
     display: flex;
     margin: auto;

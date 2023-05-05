@@ -7,9 +7,9 @@ import { useParams, Link, useNavigate} from 'react-router-dom';
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton';
 import { BsPlayFill } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
+import PlayBtn from '../components/Player-components/PlayBtn';
 
-
-const PageAlbum = ({favoriteTrack, setFavoriteTrack}) => {
+const PageAlbum = ({favoriteTrack, setFavoriteTrack, handlePlay, handlePrev, handleNext, isPlaying}) => {
 
 const [album, setAlbum] = useState({})
 const {id} = useParams();
@@ -53,9 +53,7 @@ return (
         <FavoriteButton />
       </div>
       <h4>- {album.name} -</h4>
-      <div className='album-play-btn'>
-        <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
-      </div>
+      <PlayBtn id={album.id} handlePlay={handlePlay} isPlaying={isPlaying}/>
     </div>
     <ul className='track-list'>
       {album.tracks && album.tracks.items.map((track)=> 
@@ -67,11 +65,7 @@ return (
             <p className='track-name'>{track.name}</p>
             <p className='duration'>{duration(track.duration_ms)}</p>
           </div>
-          <div className='btn-play-container'>
-            <div className='play-btn-track'>
-              <BsPlayFill style={{ height: '1.4em', width: '1.4em', fill: "#cbd1F8" }} />
-            </div>
-          </div>
+          <PlayBtn id={track.id} handlePlay={handlePlay} isPlaying={isPlaying}/>
         </li>
       )}
     </ul>

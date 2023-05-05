@@ -53,7 +53,9 @@ return (
         <FavoriteButton />
       </div>
       <h4>- {album.name} -</h4>
-      <PlayBtn id={album.id} handlePlay={handlePlay} isPlaying={isPlaying}/>
+      <div className='album-play-btn'>
+        <BsPlayFill style={{ height: '3em', width: '3em', fill: "#cbd1F8" }} />
+      </div>
     </div>
     <ul className='track-list'>
       {album.tracks && album.tracks.items.map((track)=> 

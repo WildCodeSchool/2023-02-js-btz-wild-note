@@ -6,7 +6,6 @@ import { IoIosArrowBack } from 'react-icons/io';
 import Navbar from '../components/navbar/Navbar'
 import axios from 'axios';
 
-
 const SearchResults = () => {
 
 
@@ -47,10 +46,16 @@ const SearchResults = () => {
               {
                 results[objKey].items.map(elem => elem.type !== 'track' ?
                   <Link key={`${elem.id}-link`} to={`/${objKey}/${elem.id}`}><div className={`${objKey}-card-container`}>
-                    <div className={`${objKey}-img-container`}>{!!(elem.images && elem.images.length) && <img src={elem.images[0].url}/>}</div>
+                    <div className={`${objKey}-img-container`}>{!!(elem.images && elem.images.length) && <img src={elem.images[0].url} alt={elem.id}/>}</div>
                     <div className='title-container'><h3>{elem.name}</h3></div>
-                  </div></Link>
-                  : <p key={`${elem.id}-track`}>{elem.name}</p>
+                  </div></Link> : <div key={`${elem.id}-track`} className={`${objKey}-card-container`}>
+                  <div className={`${objKey}-img-container`}>{!!(elem.album.images && elem.album.images.length) && 
+                  <img src={elem.album.images[0].url} alt={elem.id}/>}</div>
+                  <div className={`${objKey}-info-container`}>
+                    <h3>{elem.name}</h3>
+                    <p>{elem.artists[0].name}</p>
+                  </div>
+                  </div>
                 )
               }
             </div>
